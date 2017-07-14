@@ -1,5 +1,6 @@
 /*路由配置模块*/
 import React from "react";
+import All from "./Components/All/index";
 import App from "./Components/App/index";
 import Film from "./Components/Film/index";
 import Food from "./Components/Food/index";
@@ -18,16 +19,16 @@ import {
 const router = (
 	<Router>
 		<App>
-			<Route path="/all" component={All}></Route>
-			<Route path="/film" component={Film}></Route>
-			<Route path="/food" component={Food}></Route>
-			<Route path="/hotel" component={Hotel}></Route>
-			<Route path="/ktv" component={KTV}></Route>
-			<Route path="/life" component={Life}></Route>
-			<Route path="/quan" component={Quan}></Route>
-			<Route path="/travel" component={Travel}></Route>
-			<Route path="/header" component={Header}></Route>
-			<Route path="/footer" component={Footer}></Route>
+			<Route path="/all" component={All}/>
+			<Route path="/film" component={Film}/>
+			<Route path="/food" component={Food}/>
+			<Route path="/hotel" component={Hotel}/>
+			<Route path="/ktv" component={KTV}/>
+			<Route path="/life" component={Life}/>
+			<Route path="/quan" component={Quan}/>
+			<Route path="/travel" component={Travel}/>
+			<Route path="/header" component={Header}/>
+			<Route path="/footer" component={Footer}/>
 		</App>
 	</Router>
 )
