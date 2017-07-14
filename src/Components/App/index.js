@@ -1,5 +1,6 @@
-import React,{Component} form "react";
+import React,{Component} from "react";
 import "./index.scss";
+import "../../assets/iconfont/iconfont.css";
 
 class App extends Component{
 	constructor(props) {
@@ -18,14 +19,12 @@ class App extends Component{
 					</div>
 					<div className="right">
 						<i className="iconfont icon-account"></i>
-						<span我的></span>
+						<span>我的</span>
 					</div>
-				</header>
-				{this.props.children}
-
+				</header>				
 			</div>
 		)
 	}
 }
-
-export defalt App;
+// {this.props.children}
+export default App;

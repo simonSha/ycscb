@@ -19,13 +19,14 @@ ul,ol,dl,li,dd,dt{
 		position: fixed;
 		width: 100%;
 		height: px2rem(44px);
-		background: #f64744
+		background: #f64744;
+		
 		.left{
-
+			float:left;
 		}
 
 		.right{
-
+			float: right;
 		}
 	}
 }
