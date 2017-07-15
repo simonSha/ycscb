@@ -15,30 +15,32 @@ import Footer from "./Components/Footer/index";
 import {
 	HashRouter as Router,
 	Route,
-	Switch
+	Switch,
+	Redirect
 } from "react-router-dom"
 
 const router = (
 	<Router>
 		<App>
-			<Route path="/home" render={()=>
-				<Home>
-					<Switch>
-						<Route path="/all" component={All}/>
-						<Route path="/film" component={Film}/>
-						<Route path="/food" component={Food}/>
-						<Route path="/hotel" component={Hotel}/>
-						<Route path="/ktv" component={KTV}/>
-						<Route path="/life" component={Life}/>
-						<Route path="/quan" component={Quan}/>
-						<Route path="/travel" component={Travel}/>
-						<Route path="/header" component={Header}/>
-						<Route path="/footer" component={Footer}/>
-					</Switch>
-				</Home>
-			}/>
-			
-			
+			<Switch>{/*只匹配第一个符合条件的孩子组件*/}
+				<Route path="/home" render={()=>
+					<Home>
+					
+							<Route path="/all" component={All}/>
+							<Route path="/film" component={Film}/>
+							<Route path="/food" component={Food}/>
+							<Route path="/hotel" component={Hotel}/>
+							<Route path="/ktv" component={KTV}/>
+							<Route path="/life" component={Life}/>
+							<Route path="/quan" component={Quan}/>
+							<Route path="/travel" component={Travel}/>
+							<Route path="/header" component={Header}/>
+							<Route path="/footer" component={Footer}/>
+					
+					</Home>
+				}/>	
+				<Redirect from="/" to='home'/>																
+			</Switch>				
 		</App>
 	</Router>
 )
