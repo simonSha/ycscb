@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>ycscb</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <!-- <link rel="stylesheet" type="text/css" href=""> -->
   </head>
   <body>
@@ -12,6 +12,11 @@
       
     </div>
     <script src="/dist/index.bundle.js"></script>
+    <script type="text/javascript">
+      var htmlTag = document.getElementsByTagName("html")[0];
+      htmlTag.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+    </script>
+
 
     
   </body>
