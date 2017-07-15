@@ -27,10 +27,47 @@ class App extends Component{
 						<span><NavLink to="/user" >我的</NavLink></span>
 					</div>
 				</header>
-				
+				<div className="xun">
+					<div>
+						<i className="iconfont icon-search"></i>
+						<input type="text" placeholder="输入商家名字/商品名称获取优惠"/>
+					</div>
+				</div>
 				<section>
 					{this.props.children}
-				</section>				
+				</section>
+				<footer>
+					<div className="up">
+						<ul>
+							<li><NavLink to="/denglu" >登录</NavLink></li>
+							<li><NavLink to="/zhuce" >注册</NavLink></li>
+						</ul>						
+						<span><NavLink to="/map" >桐乡<i className="iconfont icon-moreunfold"></i></NavLink></span>
+						<p>城市：</p>
+					</div>
+					<div className="down">
+						<ul>
+							<li>
+								首页
+							</li>
+							<li>
+								电脑版
+							</li>
+							<li>
+								客户端
+							</li>
+							<li>
+								关于我们
+							</li>
+							<li>
+								信息反馈
+							</li>
+							<li className="lastli">
+								帮助
+							</li>
+						</ul>
+					</div>
+				</footer>				
 			</div>
 		)
 	}

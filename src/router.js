@@ -14,6 +14,12 @@ import Header from "./Components/Header/index";
 import Footer from "./Components/Footer/index";
 import User from "./Components/User/index";
 import Map from "./Components/Map/index";
+import Erone from "./Components/Erone/index";
+import Ertwo from "./Components/Ertwo/index";
+import Erthree from "./Components/Erthree/index";
+import New from "./Components/New/index";
+import Denglu from "./Components/Denglu/index";
+import Zhuce from "./Components/Zhuce/index";
 import {
 	HashRouter as Router,
 	Route,
@@ -24,11 +30,17 @@ import {
 const router = (
 	<Router>
 		<App>
-			<Switch>{/*只匹配第一个符合条件的孩子组件*/}
-				<Route path="/home" component={Home}/>					
+			<Switch>
+				<Route path="/home" component={Home}/>
+				<Route path="/food" render={()=>
+					<Food>						
+						<Route path="/food/erone" component={Erone}/>
+						<Route path="/food/ertwo" component={Ertwo}/>
+						<Route path="/food/erthree" component={Erthree}/>						
+					</Food>
+				}/>					
 				<Route path="/all" component={All}/>
 				<Route path="/film" component={Film}/>
-				<Route path="/food" component={Food}/>
 				<Route path="/hotel" component={Hotel}/>
 				<Route path="/ktv" component={KTV}/>
 				<Route path="/life" component={Life}/>
@@ -36,6 +48,9 @@ const router = (
 				<Route path="/travel" component={Travel}/>
 				<Route path="/user" component={User}/>
 				<Route path="/map" component={Map}/>
+				<Route path="/new" component={New}/>
+				<Route path="/denglu" component={Denglu}/>
+				<Route path="/zhuce" component={Zhuce}/>
 				<Route path="/header" component={Header}/>
 				<Route path="/footer" component={Footer}/>
 				<Redirect from="/" to='home'/>																
