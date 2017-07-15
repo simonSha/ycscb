@@ -1,5 +1,6 @@
-/*路由配置模块*/
+
 import React from "react";
+import Home from "./Components/Home/index";
 import All from "./Components/All/index";
 import App from "./Components/App/index";
 import Film from "./Components/Film/index";
@@ -14,21 +15,30 @@ import Footer from "./Components/Footer/index";
 import {
 	HashRouter as Router,
 	Route,
-}from "react-router-dom"
+	Switch
+} from "react-router-dom"
 
 const router = (
 	<Router>
 		<App>
-			<Route path="/all" component={All}/>
-			<Route path="/film" component={Film}/>
-			<Route path="/food" component={Food}/>
-			<Route path="/hotel" component={Hotel}/>
-			<Route path="/ktv" component={KTV}/>
-			<Route path="/life" component={Life}/>
-			<Route path="/quan" component={Quan}/>
-			<Route path="/travel" component={Travel}/>
-			<Route path="/header" component={Header}/>
-			<Route path="/footer" component={Footer}/>
+			<Route path="/home" render={()=>
+				<Home>
+					<Switch>
+						<Route path="/all" component={All}/>
+						<Route path="/film" component={Film}/>
+						<Route path="/food" component={Food}/>
+						<Route path="/hotel" component={Hotel}/>
+						<Route path="/ktv" component={KTV}/>
+						<Route path="/life" component={Life}/>
+						<Route path="/quan" component={Quan}/>
+						<Route path="/travel" component={Travel}/>
+						<Route path="/header" component={Header}/>
+						<Route path="/footer" component={Footer}/>
+					</Switch>
+				</Home>
+			}/>
+			
+			
 		</App>
 	</Router>
 )
