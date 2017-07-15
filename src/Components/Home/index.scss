@@ -5,6 +5,11 @@ $ui-width:750px;
 
 #home{
 	.carousel{
+		width: 100%;
 		height: R(130px);
+
+		img{
+			width: 100%;
+		}
 	}
 }

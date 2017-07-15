@@ -11,12 +11,14 @@ class Food extends Component{
 	render() {
 		return (
 
-			<div>
+			<div id="food">
+				<div>
+					<ul>
+						<li>
+						</li>
+					</ul>
 
-					food
-					food
-					food
-					food
+				</div>
 			</div>
 		)
 	}

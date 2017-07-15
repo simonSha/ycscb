@@ -12,6 +12,8 @@ import Quan from "./Components/Quan/index";
 import Travel from "./Components/Travel/index";
 import Header from "./Components/Header/index";
 import Footer from "./Components/Footer/index";
+import User from "./Components/User/index";
+import Map from "./Components/Map/index";
 import {
 	HashRouter as Router,
 	Route,
@@ -23,22 +25,19 @@ const router = (
 	<Router>
 		<App>
 			<Switch>{/*只匹配第一个符合条件的孩子组件*/}
-				<Route path="/home" render={()=>
-					<Home>
-					
-							<Route path="/all" component={All}/>
-							<Route path="/film" component={Film}/>
-							<Route path="/food" component={Food}/>
-							<Route path="/hotel" component={Hotel}/>
-							<Route path="/ktv" component={KTV}/>
-							<Route path="/life" component={Life}/>
-							<Route path="/quan" component={Quan}/>
-							<Route path="/travel" component={Travel}/>
-							<Route path="/header" component={Header}/>
-							<Route path="/footer" component={Footer}/>
-					
-					</Home>
-				}/>	
+				<Route path="/home" component={Home}/>					
+				<Route path="/all" component={All}/>
+				<Route path="/film" component={Film}/>
+				<Route path="/food" component={Food}/>
+				<Route path="/hotel" component={Hotel}/>
+				<Route path="/ktv" component={KTV}/>
+				<Route path="/life" component={Life}/>
+				<Route path="/quan" component={Quan}/>
+				<Route path="/travel" component={Travel}/>
+				<Route path="/user" component={User}/>
+				<Route path="/map" component={Map}/>
+				<Route path="/header" component={Header}/>
+				<Route path="/footer" component={Footer}/>
 				<Redirect from="/" to='home'/>																
 			</Switch>				
 		</App>

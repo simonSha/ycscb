@@ -16,16 +16,15 @@ class App extends Component{
 			<div id="app">
 				<header>
 					<div className="left">
-						<span>桐乡</span>
-						<i className="iconfont icon-map"></i>
-						<NavLink to="/food" >food</NavLink>						
+						<span><NavLink to="/map" >桐乡</NavLink></span>
+						<i className="iconfont icon-map"></i>				
 					</div>					
 					<div className="center">
 						<NavLink to="/home" >一传十传百</NavLink>
 					</div>
 					<div className="right">
 						<i className="iconfont icon-account"></i>
-						<span>我的</span>
+						<span><NavLink to="/user" >我的</NavLink></span>
 					</div>
 				</header>
 				

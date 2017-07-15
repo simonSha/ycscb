@@ -26,12 +26,18 @@ class Home extends Component{
 
 			<div id="home">
 				<div>
+				
 				</div>
-				<ReactSwipe className="carousel" swipeOptions={{continuous: true}}>
-	                <div>PANE 1</div>
-	                <div>PANE 2</div>
-	                <div>PANE 3</div>
-            	</ReactSwipe>
+
+				<div className="slide">
+					<ReactSwipe className="carousel" swipeOptions={{continuous: true,speed: 400,
+	  				auto: 3000,}} key={3}>
+		                <div>PANE 1</div>
+		                <div>PANE 2</div>
+		                <div>PANE 3</div>
+	            	</ReactSwipe>
+				</div>
+				
 
 				<nav>
 					<ul>
@@ -45,19 +51,19 @@ class Home extends Component{
 						<NavLink to="/hotel" >hotel</NavLink>
 						</li>
 						<li>
-						<NavLink to="/life" >food</NavLink>
+						<NavLink to="/life" >life</NavLink>
 						</li>
 						<li>
-						<NavLink to="/travel" >film</NavLink>
+						<NavLink to="/travel" >travel</NavLink>
 						</li>
 						<li>
-						<NavLink to="/quan" >hotel</NavLink>
+						<NavLink to="/quan" >quan</NavLink>
 						</li>
 						<li>
-						<NavLink to="/ktv" >food</NavLink>
+						<NavLink to="/ktv" >ktv</NavLink>
 						</li>
 						<li>
-						<NavLink to="/all" >film</NavLink>
+						<NavLink to="/all" >all</NavLink>
 						</li>						
 					</ul>
 				</nav>
