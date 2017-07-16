@@ -1,6 +1,11 @@
 import React,{Component} from "react";
 import "./index.scss";
 import axios from "axios";
+import "../../assets/iconfont/iconfont.css";
+
+import Footer from "../Footer/index";
+import "../Footer/index.scss";
+
 import ReactSwipe from "react-swipe";
 import {
 	NavLink
@@ -12,22 +17,19 @@ class Home extends Component{
 		
 	}
 
-	// componentDidMount() {
-	// 	axios.get("/index.php?act=index&op=index").then(res=>{
-	// 		 console.log(res.data);
-	// 		// this.setState({
+	componentDidMount() {
+		axios.get("/index.php?ajax=1").then((res)=>{
+			 console.log(res.data);
+			// this.setState({
 			
-	// 		// })
-	// 	})
-	// }
+			// })
+		})
+	}
 
 	render() {
 		return (
 
 			<div id="home">
-				<div>
-				
-				</div>
 
 				<div className="slide">
 					<ReactSwipe className="carousel" swipeOptions={{continuous: true,speed: 400,
@@ -42,34 +44,114 @@ class Home extends Component{
 				<nav>
 					<ul>
 						<li>
-						<NavLink to="/food" >food</NavLink>
+						<NavLink to="/food" ><a>
+							<img/>
+							<p>美食</p>
+						</a></NavLink>
 						</li>
 						<li>
-						<NavLink to="/film" >film</NavLink>
+						<NavLink to="/film" ><a>
+							<img/>
+							<p>美食</p>
+						</a></NavLink>
 						</li>
 						<li>
-						<NavLink to="/hotel" >hotel</NavLink>
+						<NavLink to="/hotel" ><a>
+							<img/>
+							<p>美食</p>
+						</a></NavLink>
 						</li>
 						<li>
-						<NavLink to="/life" >life</NavLink>
+						<NavLink to="/life" ><a>
+							<img/>
+							<p>美食</p>
+						</a></NavLink>
 						</li>
 						<li>
-						<NavLink to="/travel" >travel</NavLink>
+						<NavLink to="/travel" ><a>
+							<img/>
+							<p>美食</p>
+						</a></NavLink>
 						</li>
 						<li>
-						<NavLink to="/quan" >quan</NavLink>
+						<NavLink to="/quan" ><a>
+							<img/>
+							<p>美食</p>
+						</a></NavLink>
 						</li>
 						<li>
-						<NavLink to="/ktv" >ktv</NavLink>
+						<NavLink to="/ktv" ><a>
+							<img/>
+							<p>美食</p>
+						</a></NavLink>
 						</li>
 						<li>
-						<NavLink to="/all" >all</NavLink>
+						<NavLink to="/all" ><a>
+							<img/>
+							<p>美食</p>
+						</a></NavLink>
 						</li>						
 					</ul>
 				</nav>
+
+				<main>
+				<h2>本周推荐</h2>
+				<ul>
+					<li>
+						<NavLink to="/all" >
+						<img />
+						<ul>
+							<li>
+							<p>老乡长传家菜</p>
+							<span>新世纪公园</span>
+							</li>
+							<li>老香樟传家菜全场8.5折！</li>
+							<li>
+							<h3>￥0</h3><p>/ 0</p>
+							<span>7</span><i className="iconfont icon-account"></i>
+							</li>
+						</ul>
+						</NavLink>
+					</li>
+					<li>
+						<NavLink to="/all" >
+						<img />
+						<ul>
+							<li>
+							<p>老乡长传家菜</p>
+							<span>新世纪公园</span>
+							</li>
+							<li>老香樟传家菜全场8.5折！</li>
+							<li>
+							<h3>￥0</h3><p>/ 0</p>
+							<span>7</span><i className="iconfont icon-account"></i>
+							</li>
+						</ul>
+						</NavLink>
+					</li>
+					<li>
+						<NavLink to="/all" >
+						<img />
+						<ul>
+							<li>
+							<p>老乡长传家菜</p>
+							<span>新世纪公园</span>
+							</li>
+							<li>老香樟传家菜全场8.5折！</li>
+							<li>
+							<h3>￥0</h3><p>/ 0</p>
+							<span>7</span><i className="iconfont icon-account"></i>
+							</li>
+						</ul>
+						</NavLink>
+					</li>
+				</ul>
+				</main>
+
 				<section>
 					{this.props.children}
 				</section>
+				<Footer></Footer>
 			</div>
 
 		)

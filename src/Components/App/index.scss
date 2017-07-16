@@ -29,16 +29,19 @@ input{
 }
 
 #app{
-
+	
 	header{
 		position: fixed;
 		top:0;
+		z-index: 5;
 		width: 100%;
 		height: R(88px);
 		background: #f64744;
 		font-size: 12px;
 		line-height: R(88px);
 		color: #fff;
+		display: fixed;
+		top:0;
 
 		a{
 			color: #fff;
@@ -71,108 +74,43 @@ input{
 			}
 		}
 
-	}
-
-	.xun{
-		width: 100%;
-		height: R(108px);
-		padding-top:R(88px);
-
-		div{
-			width: R(704px);
-			height: R(64px);
-			border:1px solid #e0e0e0;
-			border-radius:2px;
-			margin:10px auto 0;
-			line-height: R(64px);
-
-			i{
-				float:left;
-				font-size: 18px;
-				padding-left:R(10px);
-			}
-			input{
-				width: R(650px);
-				height: R(40px);
-				float:left;
-				border:none;
+		.xun{
+			
+			width: 100%;
+			height: R(108px);
+			padding-top:R(88px);
+			background:#f64744;
+			
+			div{
+				width: R(704px);
+				height: R(64px);
+				border:1px solid #e0e0e0;
+				border-radius:2px;
+				margin:10px auto 0;
 				line-height: R(64px);
-				margin-top: R(12px);
-				margin-left: R(5px);			
+				background:#FFF;
+				i{
+					float:left;
+					font-size: 18px;
+					padding-left:R(10px);
+					color:#717171;
+				}
+				input{
+					width: R(650px);
+					height: R(40px);
+					float:left;
+					border:none;
+					line-height: R(64px);
+					margin-top: R(12px);
+					margin-left: R(5px);			
+				}
 			}
 		}
 
-		
 	}
 
-	
+	section{
 
-	footer{
-
-		.up{
-			width: 100%;
-			height: R(100px);
-			border-top:2px solid #e0e0e0;
-			border-bottom:2px solid #e0e0e0;
-			font-size: 15px;
-			ul{
-				float:left;
-				height: 100%;
-
-				li{
-					width:R(116px);
-					height:R(56px);
-					border:2px solid #e0e0e0;
-					border-radius: 5px;
-					float:left;
-					background:#fafafa;
-					color:#296da1;
-					margin-left: R(20px);
-					margin-top: R(21px);
-					line-height: R(56px);
-					text-align: center;
-				}
-			}
-
-			p{
-				float:right;
-				line-height: R(100px);
-				margin-right: R(10px);
-			}
-			span{
-				float:right;
-				width:R(116px);
-				height:R(56px);
-				border:2px solid #e0e0e0;
-				border-radius: 5px;
-				text-align: center;
-				margin-top: R(21px);
-				line-height: R(56px);
-				margin-right: R(20px);
-			}
-		}
-
-		.down{
-			width: 100%;
-			height: R(64px);
-			background:#f5f5f5;
-			font-size: 12px;
-
-			ul{
-				float:left;
-
-				li{
-					float:left;
-					color:#296da1;
-					padding:0 12px;
-					border-right:1px solid #e0e0e0;
-					margin-top: R(12px);
-				}
-				.lastli{
-					border:none;
-				}
-			}
-		}
 	}
 
 }

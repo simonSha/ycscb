@@ -12,9 +12,9 @@ class Ertwo extends Component{
 		return (
 
 			<div id="two">
-			 <ul>
-			 	<li></li>
-			 </ul>
+				<ul>
+				 	<li></li>
+				</ul>
 			</div>
 		)
 	}

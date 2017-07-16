@@ -1,3 +1,8 @@
+$ui-width:750px;
+	@function R($px) {
+		@return $px/$ui-width*7.5rem;
+	}
+
 body,h1,h2,h3,h4,h5,h6,p,a,img,ul,li,ol,dl,dt,dd,input,form,table{
     padding:0;
     margin:0;
@@ -9,14 +14,19 @@ html,body{
 ul,ol,dl,li,dd,dt{
     list-style: none;
 }
-#app{
-	header{
-		.left{
-
-		}
-		
-		.right{
-
+#one{
+	ul{
+		width: 100%;
+		background: #fff;
+		li{
+			height: R(60px);
+			font-size: 15px;
+			margin-top:R(15px);
+			padding-left:R(20px);
+			border-bottom:1px solid #ccc;
+			a{
+				color:#171717;
+			}
 		}
 	}
 }

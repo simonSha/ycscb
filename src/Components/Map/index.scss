@@ -1,3 +1,8 @@
+$ui-width:750px;
+	@function R($px) {
+		@return $px/$ui-width*7.5rem;
+	}
+
 body,h1,h2,h3,h4,h5,h6,p,a,img,ul,li,ol,dl,dt,dd,input,form,table{
     padding:0;
     margin:0;
@@ -5,18 +10,104 @@ body,h1,h2,h3,h4,h5,h6,p,a,img,ul,li,ol,dl,dt,dd,input,form,table{
 html,body{
     width: 100%;
     height: 100%;
+    
 }
 ul,ol,dl,li,dd,dt{
     list-style: none;
 }
-#app{
-	header{
-		.left{
+a{
+	text-decoration: none;
+}
+input{
+	outline:none;
+}
 
-		}
-		
-		.right{
+#food{
+	width:100%;
+	.er{
+		width: 100%;
+		position: fixed;
+		top:R(196px);
+		ul{
+			width: 100%;
+			height: R(76px);
+			line-height: R(76px);
+			background: skyblue;
+			li{
+				width: 100%;
+				float: left;
+				width: 33.3%;
+				font-size: 15px;
+				text-align: center;
+				
+				
+				a{
+					color:#717171;
+					padding: 0 33px;
+					border-right:1px solid #717171;
+				}
+			}
 
+			.listli2{
+				border:none;
+			}
 		}
 	}
+
+	.main{
+		padding-top:R(272px);
+	}
+	
+	section{
+		width: 100%;
+		position:fixed;
+		top:R(267px);
+		
+
+	}
+
+}
+
+
+.show{
+	// display: block;
+	animation:kerwinshow 1s both;
+
+
+}
+
+
+@keyframes kerwinshow{
+	from{
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+
+	to{
+		transform: translateX(0px);	
+		opacity: 1;
+	}
+}
+
+.hide{
+	// display:none;
+	animation:kerwinhide 1s both;
+
+}
+
+@keyframes kerwinhide{
+	from{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+
+	to{
+		transform: translateX(-100%);	
+		opacity: 0;
+	}
+}
+
+.f60{
+	color:#f60;
+	
 }
