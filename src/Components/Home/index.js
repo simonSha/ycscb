@@ -18,12 +18,13 @@ class Home extends Component{
 	}
 
 	componentDidMount() {
-		axios.get("/index.php?act=index&op=index&ajax=1").then((res)=>{
+		axios.get("/index.php?act=list&op=getYouhuiClass&cate=meishi").then((res)=>{
 			 console.log(res.data);
 			// this.setState({
 			
 			// })
 		})
+
 	}
 
 	render() {

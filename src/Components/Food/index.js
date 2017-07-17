@@ -1,5 +1,6 @@
 import React,{Component} from "react";
 import "./index.scss";
+import axios from "axios";
 import "../../assets/iconfont/iconfont.css";
 
 import Header from "../Header/index";
@@ -19,6 +20,22 @@ class Food extends Component{
 			isFirstShow:false,
 			iClass: false
 		}
+
+	}
+
+	componentDidMount() {
+		axios.get("/index.php?act=list&op=getYouhuiClass&cate=meishi").then((res)=>{
+			 console.log(res.data.data.cate.data);
+			// this.setState({
+			
+			// })
+		}),
+		axios.get("/list.html?cate=meishi&ajax=1").then((res)=>{
+			 console.log(res.data);
+			// this.setState({
+			
+			// })
+		})
 	}
 
 

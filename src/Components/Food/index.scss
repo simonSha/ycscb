@@ -28,13 +28,14 @@ input{
 	.er{
 		width: 100%;
 		position: fixed;
-		top: 0px;
+		top: R(108px);
 		border-bottom:1px solid #ccc;
+		background-color: #FFF;
 		ul{
 			width: 100%;
 			height: R(76px);
 			line-height: R(76px);
-			background: yellow;
+			
 			li{
 				width: 100%;
 				float: left;
@@ -146,7 +147,7 @@ input{
 	section{
 		width: 100%;
 		position:fixed;
-		top:R(184px);
+		top:R(185px);
 		
 
 	}
@@ -157,7 +158,6 @@ input{
 .show{
 	// display: block;
 	animation:kerwinshow 1s both;
-
 
 }
 
@@ -192,7 +192,3 @@ input{
 	}
 }
 
-.f60{
-	color:#f60;
-	
-}
