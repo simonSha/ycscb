@@ -13,6 +13,9 @@ import Travel from "./Components/Travel/index";
 import Header from "./Components/Header/index";
 import Footer from "./Components/Footer/index";
 import User from "./Components/User/index";
+import Zhdr from "./Components/zhdr/index";
+import Sjdxdr from "./Components/sjdxdr/index";
+import Wjmm from "./Components/wjmm/index";
 import Map from "./Components/Map/index";
 import Erone from "./Components/Erone/index";
 import Ertwo from "./Components/Ertwo/index";
@@ -48,7 +51,17 @@ const router = (
 				<Route path="/life" component={Life}/>
 				<Route path="/quan" component={Quan}/>
 				<Route path="/travel" component={Travel}/>
-				<Route path="/user" component={User}/>
+				<Route path="/user" render={()=>
+					<User>
+					<Switch>
+					<Route path="/user/zhdr" component={Zhdr}/>
+				    <Route path="/user/sjdxdr" component={Sjdxdr}/>
+				    <Route path="/user/zhuce" component={Zhuce}/>
+				    <Route path="/user/wjmm" component={Wjmm}/>
+				    <Redirect from="/user" to="/user/zhdr"/>
+				    </Switch>
+				    </User>
+				}/>
 				<Route path="/map" component={Map}/>
 				<Route path="/new" component={New}/>
 				<Route path="/denglu" component={Denglu}/>

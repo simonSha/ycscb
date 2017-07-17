@@ -1,5 +1,12 @@
 import React,{Component} from "react";
 import "./index.scss";
+import{
+	NavLink
+}from"react-router-dom";
+
+import Zhdr from "../zhdr/index"
+import Sjdxdr from "../sjdxdr/index"
+
 
 class User extends Component{
 	constructor(props) {
@@ -12,9 +19,21 @@ class User extends Component{
 		return (
 
 			<div>
+				
+				<div className="q1">
+				<NavLink to="/user/zhdr" activeClassName="active">账号登录</NavLink>
+				
+				</div>
 
-					dajkhdka
+				<div className="q1">
+				<NavLink to="/user/sjdxdr" activeClassName="active">手机短信登录</NavLink>
+				</div>
+				{ 
+					//预留的插槽
+					}
+					{this.props.children}
 			</div>
+			
 		)
 	}
 }
