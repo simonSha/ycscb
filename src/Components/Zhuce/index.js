@@ -13,12 +13,8 @@ class Zhuce extends Component{
 
 			<div>
 
-					foodfawfhawhfalwf
-					afwwahfawlf
-					awfhwalfhwalf
-					fawkhfkawffhwaff
-					fawfwahfjawf
-					fwafjawhfawhfhw
+					food
+					
 			</div>
 		)
 	}
