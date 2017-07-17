@@ -10,15 +10,20 @@ class Zhuce extends Component{
 
 	render() {
 		return (
-
 			<div>
-
-					foodfawfhawhfalwf
-					afwwahfawlf
-					awfhwalfhwalf
-					fawkhfkawffhwaff
-					fawfwahfjawf
-					fwafjawhfawhfhw
+			<div id="container">
+			<div className="con1">
+			<input className="shouji" placeholder="请输入11位手机号码"/>
+			</div>
+			<button className="yanzheng" >获取验证码</button>
+			<input className="duanxin" placeholder="请输收到的短信验证码"/>
+			<div className="con">
+				<input placeholder="请输入您的密码，长度至少6位"/>
+				<button>显示</button>
+			</div>
+		
+			</div>
+			<button className="xiugai">修改密码</button>
 			</div>
 		)
 	}
