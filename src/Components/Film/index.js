@@ -3,6 +3,7 @@ import "./index.scss";
 import "../../assets/iconfont/iconfont.css";
 import Footer from "../Footer/index";
 import "../Footer/index.scss";
+import axios from "axios";
 import {
 	NavLink
 } from "react-router-dom";
@@ -13,11 +14,29 @@ class Film extends Component{
 		this.state = {
 			isShow:false,
 			isFirstShow:false,
-			iClass: false
+			iClass: false,
+			playinglist:[]
+			
 		}
+	}
+	componentDidMount() {
+		axios.get("/list.html?cate=dianying&ajax=1").then((res)=>{
+			
+			 console.log(res.data);
+			 console.log(res.data.data.title);
+			 this.setState({
+				playinglist:res.data.data
+			})
+
+
+			// this.setState({
+			
+			// })
+		})
 	}
 
 
+	
 	render() {
 		return (
 
@@ -65,15 +84,23 @@ class Film extends Component{
 
 				</div>
 				<div className="main">
-				food
-				food
-				dood
+				<div className="nowplaying">
+
+	            	{
+	            		this.state.playinglist.map((item,index)=>
+
+	            			<img src={item.image_240} key={item.id}/>
+	            			
+	            		)
+	            	}
+	            </div>
 				</div>
 				<section className={this.state.isShow?'show':'hide'}
 					style={{display:this.state.isFirstShow?'block':'none'}}
 				>
 					{this.props.children}
 				</section>
+
 				<Footer></Footer>
 			</div>
 		)
