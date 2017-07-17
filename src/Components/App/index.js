@@ -28,12 +28,7 @@ class App extends Component{
 						<span><NavLink to="/user" >我的</NavLink></span>
 					</div>
 
-					<div className="xun">
-						<div>
-							<i className="iconfont icon-search"></i>
-							<input type="text" placeholder="输入商家名字/商品名称获取优惠"/>
-						</div>
-					</div>
+					
 				</header>
 				
 				<section>

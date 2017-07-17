@@ -40,7 +40,7 @@ class Film extends Component{
 	render() {
 		return (
 
-			<div id="food">
+			<div id="film">
 				<div className="er">
 					<ul>
 						<li onClick={
@@ -88,8 +88,11 @@ class Film extends Component{
 
 	            	{
 	            		this.state.playinglist.map((item,index)=>
+	            			<div>
 
 	            			<img src={item.image_240} key={item.id}/>
+	            			<h3>{item.title}</h3>
+	            			</div>
 	            			
 	            		)
 	            	}

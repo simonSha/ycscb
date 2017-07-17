@@ -21,7 +21,7 @@ class Hotel extends Component{
 	render() {
 		return (
 
-			<div id="food">
+			<div id="hotel">
 				<div className="er">
 					<ul>
 						<li onClick={

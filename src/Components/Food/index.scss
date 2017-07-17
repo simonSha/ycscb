@@ -24,15 +24,17 @@ input{
 
 #food{
 	width:100%;
+
 	.er{
 		width: 100%;
 		position: fixed;
-		top:R(196px);
+		top: 0px;
+		border-bottom:1px solid #ccc;
 		ul{
 			width: 100%;
 			height: R(76px);
 			line-height: R(76px);
-			background: skyblue;
+			background: yellow;
 			li{
 				width: 100%;
 				float: left;
@@ -54,14 +56,97 @@ input{
 		}
 	}
 
-	.main{
-		padding-top:R(272px);
-	}
+	main{
+		width:100%;		
+		background-color:#ff0;
+		padding-top: R(184px);
+		ul{
+			width:100%;
+			li{
+				width:100%;
+				height: R(200px);
+				border-bottom:1px solid #ccc;
+
+				img{
+					float: left;
+					width: R(236px);
+					height: R(156px);
+					margin: R(20px);
+					border: 1px solid #ccc;
+				}
+
+				ul{
+					width: R(460px);
+					height: R(160px);
+					margin:R(20px) 0;
+					float: left;
+					font-size: 12px;
+
+					li{
+						width: 100%;
+						border: none;
+					}
+
+					li:nth-of-type(1){
+						height: R(28px);
+						padding-bottom: R(10px);
+						color: #000;
+
+						p{
+							float: left;
+							font-size: 14px;
+						}
+						span{
+							float: right;
+							font-size: 12px;
+							color: #9b9b9b;
+						}
+					}
+
+					li:nth-of-type(2){
+						height: R(80px);
+						color: #636363;
+						font-size: 12px;
+					}
+					li:nth-of-type(3){
+						height: R(30px);
+
+						h3{
+							float: left;
+							height: R(30px);
+							font-size: 15px;
+							color: #ff3c6e;
+							padding-right: R(10px);
+						}
+
+						p{
+							float: left;
+							padding-top: R(6px);
+						}
+
+						i{
+							float: right;
+							font-size: R(10px);
+							padding-top: R(6px);
+							padding-right:R(10px);
+						}
+						span{
+							float: right;
+							padding-top: R(4px);
+
+						}
+					}
+
+				}
+
+			}
+		}
+	}	
 	
 	section{
 		width: 100%;
 		position:fixed;
-		top:R(267px);
+		top:R(184px);
 		
 
 	}
@@ -79,12 +164,12 @@ input{
 
 @keyframes kerwinshow{
 	from{
-		transform: translateX(-100%);
+		transform: translateY(-100%);
 		opacity: 0;
 	}
 
 	to{
-		transform: translateX(0px);	
+		transform: translateY(0px);	
 		opacity: 1;
 	}
 }
@@ -97,12 +182,12 @@ input{
 
 @keyframes kerwinhide{
 	from{
-		transform: translateX(0px);
+		transform: translateY(0px);
 		opacity: 1;
 	}
 
 	to{
-		transform: translateX(-100%);	
+		transform: translateY(-100%);	
 		opacity: 0;
 	}
 }

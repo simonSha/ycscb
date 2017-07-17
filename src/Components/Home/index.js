@@ -19,7 +19,7 @@ class Home extends Component{
 
 	componentDidMount() {
 		axios.get("/index.php?act=index&op=index&ajax=1").then((res)=>{
-			
+
 			 console.log(res.data);
 			// this.setState({
 			
@@ -31,7 +31,13 @@ class Home extends Component{
 		return (
 
 			<div id="home">
-
+				<div className="xun">
+					<div>
+						<i className="iconfont icon-search"></i>
+						<input type="text" placeholder="输入商家名字/商品名称获取优惠"/>
+					</div>
+				</div>
+				
 				<div className="slide">
 					<ReactSwipe className="carousel" swipeOptions={{continuous: true,speed: 400,
 	  				auto: 3000,}} key={3}>
@@ -109,7 +115,7 @@ class Home extends Component{
 							<li>老香樟传家菜全场8.5折！</li>
 							<li>
 							<h3>￥0</h3><p>/ 0</p>
-							<span>7</span><i className="iconfont icon-account"></i>
+							<span>7</span><i className="iconfont icon-accountfilling"></i>
 							</li>
 						</ul>
 						</NavLink>
@@ -125,7 +131,7 @@ class Home extends Component{
 							<li>老香樟传家菜全场8.5折！</li>
 							<li>
 							<h3>￥0</h3><p>/ 0</p>
-							<span>7</span><i className="iconfont icon-account"></i>
+							<span>7</span><i className="iconfont icon-accountfilling"></i>
 							</li>
 						</ul>
 						</NavLink>
@@ -141,7 +147,7 @@ class Home extends Component{
 							<li>老香樟传家菜全场8.5折！</li>
 							<li>
 							<h3>￥0</h3><p>/ 0</p>
-							<span>7</span><i className="iconfont icon-account"></i>
+							<span>7</span><i className="iconfont icon-accountfilling"></i>
 							</li>
 						</ul>
 						</NavLink>
