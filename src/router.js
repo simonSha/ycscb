@@ -20,6 +20,8 @@ import Erthree from "./Components/Erthree/index";
 import New from "./Components/New/index";
 import Denglu from "./Components/Denglu/index";
 import Zhuce from "./Components/Zhuce/index";
+import List from "./Components/List/index";
+import Car from "./Components/Car/index";
 import {
 	HashRouter as Router,
 	Route,
@@ -51,6 +53,8 @@ const router = (
 				<Route path="/new" component={New}/>
 				<Route path="/denglu" component={Denglu}/>
 				<Route path="/zhuce" component={Zhuce}/>
+				<Route path="/list" component={List}/>
+				<Route path="/car" component={Car}/>
 				<Route path="/header" component={Header}/>
 				<Route path="/footer" component={Footer}/>
 				<Redirect from="/" to='home'/>																

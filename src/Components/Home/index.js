@@ -98,7 +98,7 @@ class Home extends Component{
 				<h2>本周推荐</h2>
 				<ul>
 					<li>
-						<NavLink to="/all" >
+						<NavLink to="/list" >
 						<img />
 						<ul>
 							<li>
@@ -114,7 +114,7 @@ class Home extends Component{
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/all" >
+						<NavLink to="/list" >
 						<img />
 						<ul>
 							<li>
@@ -130,7 +130,7 @@ class Home extends Component{
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/all" >
+						<NavLink to="/list" >
 						<img />
 						<ul>
 							<li>
