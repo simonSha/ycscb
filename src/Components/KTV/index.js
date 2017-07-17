@@ -21,7 +21,7 @@ class KTV extends Component{
 	render() {
 		return (
 
-			<div id="food">
+			<div id="ktv">
 				<div className="er">
 					<ul>
 						<li onClick={

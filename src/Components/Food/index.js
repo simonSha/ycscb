@@ -2,6 +2,9 @@ import React,{Component} from "react";
 import "./index.scss";
 import "../../assets/iconfont/iconfont.css";
 
+import Header from "../Header/index";
+import "../Footer/index.scss";
+
 import Footer from "../Footer/index";
 import "../Footer/index.scss";
 import {
@@ -23,6 +26,7 @@ class Food extends Component{
 		return (
 
 			<div id="food">
+			<Header></Header>
 				<div className="er">
 					<ul>
 						<li onClick={
@@ -65,11 +69,59 @@ class Food extends Component{
 					</ul>
 
 				</div>
-				<div className="main">
-				food
-				food
-				dood
-				</div>
+				<main>
+				
+				<ul>
+					<li>
+						<NavLink to="/list" >
+						<img />
+						<ul>
+							<li>
+							<p>老乡长传家菜</p>
+							<span>新世纪公园</span>
+							</li>
+							<li>老香樟传家菜全场8.5折！</li>
+							<li>
+							<h3>￥0</h3><p>/ 0</p>
+							<span>7</span><i className="iconfont icon-account"></i>
+							</li>
+						</ul>
+						</NavLink>
+					</li>
+					<li>
+						<NavLink to="/list" >
+						<img />
+						<ul>
+							<li>
+							<p>老乡长传家菜</p>
+							<span>新世纪公园</span>
+							</li>
+							<li>老香樟传家菜全场8.5折！</li>
+							<li>
+							<h3>￥0</h3><p>/ 0</p>
+							<span>7</span><i className="iconfont icon-account"></i>
+							</li>
+						</ul>
+						</NavLink>
+					</li>
+					<li>
+						<NavLink to="/list" >
+						<img />
+						<ul>
+							<li>
+							<p>老乡长传家菜</p>
+							<span>新世纪公园</span>
+							</li>
+							<li>老香樟传家菜全场8.5折！</li>
+							<li>
+							<h3>￥0</h3><p>/ 0</p>
+							<span>7</span><i className="iconfont icon-account"></i>
+							</li>
+						</ul>
+						</NavLink>
+					</li>
+				</ul>
+				</main>
 				<section className={this.state.isShow?'show':'hide'}
 					style={{display:this.state.isFirstShow?'block':'none'}}
 				>
