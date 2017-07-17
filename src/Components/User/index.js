@@ -13,7 +13,7 @@ class User extends Component{
 
 			<div>
 
-					food
+					dajkhdka
 			</div>
 		)
 	}
