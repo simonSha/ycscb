@@ -21,7 +21,7 @@ class Film extends Component{
 	render() {
 		return (
 
-			<div id="food">
+			<div id="film">
 				<div className="er">
 					<ul>
 						<li onClick={

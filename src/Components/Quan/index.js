@@ -21,7 +21,7 @@ class Quan extends Component{
 	render() {
 		return (
 
-			<div id="food">
+			<div id="quan">
 				<div className="er">
 					<ul>
 						<li onClick={
