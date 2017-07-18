@@ -1,3 +1,4 @@
+
 import React,{Component} from "react";
 import "./index.scss";
 
@@ -12,9 +13,7 @@ class Zhuce extends Component{
 		return (
 			<div>
 			<div id="container">
-			<div className="con1">
 			<input className="shouji" placeholder="请输入11位手机号码"/>
-			</div>
 			<button className="yanzheng" >获取验证码</button>
 			<input className="duanxin" placeholder="请输收到的短信验证码"/>
 			<div className="con">
@@ -28,5 +27,6 @@ class Zhuce extends Component{
 		)
 	}
 }
+
 
 export default Zhuce;

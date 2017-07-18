@@ -18,7 +18,7 @@ class User extends Component{
 	render() {
 		return (
 
-			<div>
+			<div id="nav">
 				
 				<div className="q1">
 				<NavLink to="/user/zhdr" activeClassName="active">账号登录</NavLink>

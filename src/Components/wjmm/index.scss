@@ -1,20 +1,9 @@
-body,h1,h2,h3,h4,h5,h6,p,a,img,ul,li,ol,dl,dt,dd,input,form,table{
-    padding:0;
-    margin:0;
-}
-input{border-style:none}
 $ui-width:750px;
 	@function R($px) {
 		@return $px/$ui-width*7.5rem;
 	}
 
-html,body{
-    width: 100%;
-    height: 100%;
-}
-ul,ol,dl,li,dd,dt{
-    list-style: none;
-}
+
 #app{
 	header{
 		.left{
@@ -34,17 +23,18 @@ ul,ol,dl,li,dd,dt{
 
 
 }
-.con1{width:70%;
+
+.shouji{width:70%;
 		height:R(90px);
 	float:left;
 	margin-left:R(10px);
 	border:1px solid #e7e7e7;
-	margin-top:R(20px)
-}
-.shouji{width:90%;
-	height:100%;
-	float:left;
-	margin-left: 4%;
+	margin-top:R(20px);
+	padding-left:R(20px);
+	box-sizing:border-box;
+
+
+
 	}
 .yanzheng{width:25%;
 			height:R(90px); 
@@ -55,9 +45,6 @@ ul,ol,dl,li,dd,dt{
 			margin-top:R(20px);
 			border:1px solid #e7e7e7;
 
-
-}
-.con2{
 
 }
 .duanxin{
@@ -72,7 +59,6 @@ ul,ol,dl,li,dd,dt{
 
 .con{width:97%;
 	height:R(90px); 
-	border:1px solid #e7e7e7;
 	margin-top:R(20px);
 	margin-left:R(10px);
 
@@ -81,20 +67,26 @@ ul,ol,dl,li,dd,dt{
 .con input{width:80%;
 		height: 100%;
 		float:left;
-		margin-left: R(20px)}
+		border:1px solid #e7e7e7;
+		padding-left:R(20px);
+
+
+		}
 .con button{
 		width:15%;
 		height: 100%;
 		float:right;
 		background:#fff;
+		border:1px solid #e7e7e7;
 
 }
 .xiugai{width:90%;
 		height: R(90px);
-		margin-top:R(25px);
-		margin-left: 4%;
+		margin:R(25px) auto;
 		background:#f64744;
 		border-style:none;
+		display: block;
+		color:#fff;
 
 
 		}
