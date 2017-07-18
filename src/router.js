@@ -70,7 +70,7 @@ const router = (
 				<Route path="/car" component={Car}/>
 				<Route path="/header" component={Header}/>
 				<Route path="/footer" component={Footer}/>
-				<Redirect from="/" to='home'/>																
+				<Redirect from="/" to='/home'/>																
 			</Switch>				
 		</App>
 	</Router>
