@@ -65,6 +65,7 @@ const router = (
 				<Route path="/map" component={Map}/>
 				<Route path="/new" component={New}/>
 				<Route path="/denglu" component={Denglu}/>
+				
 				<Route path="/list" component={List}/>
 				<Route path="/car" component={Car}/>
 				<Route path="/header" component={Header}/>

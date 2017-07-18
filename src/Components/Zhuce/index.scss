@@ -1,3 +1,9 @@
+$ui-width:750px;
+	@function R($px) {
+		@return $px/$ui-width*7.5rem;
+	}
+
+
 body,h1,h2,h3,h4,h5,h6,p,a,img,ul,li,ol,dl,dt,dd,input,form,table{
     padding:0;
     margin:0;
@@ -17,6 +23,126 @@ ul,ol,dl,li,dd,dt{
 		
 		.right{
 
+		}
+	}
+}
+/*********************/
+#zhuce {
+	background:#fff;
+	border-top:R(2px) solid #e0e0e0;
+	border-bottom:R(2px) solid #e0e0e0;
+	margin-top: R(20px);
+	padding-bottom:R(10px);
+	// overflow: hidden;
+	.from{
+		display: block;
+		padding:0 R(10px);
+
+		.call{
+			margin-top: R(20px);
+			position: relative;
+			.right{
+				float: right;
+				width: R(160px);
+				height: R(84px);
+				line-height: R(84px);
+				color: #F64744;
+				background: #fff;
+				font-size: R(24px);
+				border: R(2px) solid #e0e0e0;
+				text-align: center;
+				border-radius: R(20px);
+			}
+			.left{
+				width: R(512px);
+				height: R(88px);
+				border: R(2px) solid #e0e0e0;
+				border-radius: R(10px);
+				.leftt{
+					width: R(492px);
+					height: 100%;
+					border: 0;
+					padding-left: R(20px);
+					line-height: R(88px);
+				}
+			}
+		}
+		.yz{
+			position: relative;
+			top: R(20px);
+			width: R(710px);
+			.yzm{
+				width: R(690px);
+				height: R(88px);
+				line-height: R(88px);
+				border: R(2px) solid #e0e0e0;
+				border-radius: R(10px);
+				padding-left: R(20px);
+			}
+		}
+		.pw{
+			position: relative;
+			top: R(30px);
+			width: R(710px);
+			border: R(2px) solid #e0e0e0;
+			border-radius:R(10px);
+			height: R(88px);
+			.psw{
+				width: R(355px);
+				height: R(88px);
+				line-height: R(88px);
+				padding-left: R(20px);
+				border: 0;
+			}
+			.li{
+				
+			}
+			.btn{
+				position:absolute;
+				top: R(12px);
+				right: R(12px);
+				width: R(88px);
+				height: R(60px);
+				color: #9b9b9b;
+				text-align: center;
+				line-height: R(60px);
+				box-sizing: border-box;
+				list-style-type:none;
+			}
+		}
+	}
+	.wc{
+		position: relative;
+		top: R(70px);	
+		padding: 0 R(15px);
+		.a{
+			width: 100%;
+			height: R(72px);
+			background: #F64744;
+			display: block;
+			text-align: center;
+			line-height: R(72px);
+			color: #fff;
+			font-size: R(32px);
+			border-radius: R(10px);
+		}
+		.bom{
+			height: R(60px);
+			line-height: R(60px);
+			margin-top: R(20px);
+			.in{
+				width: R(24px);
+				height: R(24px);
+				margin-right: R(10px);
+			}
+			span{
+				color: #000;
+			 } 
+			p{
+				display: inline-block;
+				position:absolute;
+				right: R(330px)
+			}
 		}
 	}
 }
