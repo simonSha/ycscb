@@ -146,8 +146,10 @@ input{
 	
 	section{
 		width: 100%;
+		height: auto;
 		position:fixed;
 		top:R(185px);
+		overflow: scroll;
 		
 
 	}

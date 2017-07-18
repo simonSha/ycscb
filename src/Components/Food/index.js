@@ -25,7 +25,7 @@ class Food extends Component{
 
 	componentDidMount() {
 		axios.get("/index.php?act=list&op=getYouhuiClass&cate=meishi").then((res)=>{
-			 console.log(res.data.data.cate);
+			 console.log(res.data.data.cate.data);
 			// this.setState({
 			
 			// })
