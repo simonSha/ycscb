@@ -25,6 +25,7 @@ import Denglu from "./Components/Denglu/index";
 import Zhuce from "./Components/Zhuce/index";
 import List from "./Components/List/index";
 import Car from "./Components/Car/index";
+import Navv from "./Components/Navv/index";
 import {
 	HashRouter as Router,
 	Route,
@@ -70,6 +71,13 @@ const router = (
 				<Route path="/car" component={Car}/>
 				<Route path="/header" component={Header}/>
 				<Route path="/footer" component={Footer}/>
+				<Route path="/navv" render={()=>
+					<Navv>						
+						<Route path="/navv/erone" component={Erone}/>
+						<Route path="/navv/ertwo" component={Ertwo}/>
+						<Route path="/navv/erthree" component={Erthree}/>						
+					</Navv>
+				}/>					
 				<Redirect from="/" to='home'/>																
 			</Switch>				
 		</App>
