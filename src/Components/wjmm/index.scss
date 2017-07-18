@@ -1,14 +1,9 @@
-body,h1,h2,h3,h4,h5,h6,p,a,img,ul,li,ol,dl,dt,dd,input,form,table{
-    padding:0;
-    margin:0;
-}
-html,body{
-    width: 100%;
-    height: 100%;
-}
-ul,ol,dl,li,dd,dt{
-    list-style: none;
-}
+$ui-width:750px;
+	@function R($px) {
+		@return $px/$ui-width*7.5rem;
+	}
+
+
 #app{
 	header{
 		.left{
@@ -20,3 +15,83 @@ ul,ol,dl,li,dd,dt{
 		}
 	}
 }
+
+#container{
+		height:200px;
+		background:#fff;
+		margin-top: R(130px);
+
+
+}
+
+.shouji{width:70%;
+		height:R(90px);
+	float:left;
+	margin-left:R(10px);
+	border:1px solid #e7e7e7;
+	margin-top:R(20px);
+	padding-left:R(20px);
+	box-sizing:border-box;
+
+
+
+	}
+.yanzheng{width:25%;
+			height:R(90px); 
+			float:right;
+			margin-right:R(10px);
+			color:red;
+			background:#fff;
+			margin-top:R(20px);
+			border:1px solid #e7e7e7;
+
+
+}
+.duanxin{
+	width:97%;
+	height:R(90px); 
+	border:1px solid #e7e7e7;
+	margin-top:R(20px);
+	margin-left:R(10px);
+	padding-left:R(20px);
+	box-sizing:border-box;
+}
+
+.con{width:97%;
+	height:R(90px); 
+	margin-top:R(20px);
+	margin-left:R(10px);
+
+}
+
+.con input{width:80%;
+		height: 100%;
+		float:left;
+		border:1px solid #e7e7e7;
+		padding-left:R(20px);
+
+
+		}
+.con button{
+		width:15%;
+		height: 100%;
+		float:right;
+		background:#fff;
+		border:1px solid #e7e7e7;
+
+}
+.xiugai{width:90%;
+		height: R(90px);
+		margin:R(25px) auto;
+		background:#f64744;
+		border-style:none;
+		display: block;
+		color:#fff;
+
+
+		}
+
+
+
+
+

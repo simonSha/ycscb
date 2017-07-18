@@ -16,9 +16,9 @@ class Film extends Component{
 			isFirstShow:false,
 			iClass: false,
 			playinglist:[]
-			
 		}
 	}
+
 	
 	componentDidMount() {
 		axios.get("/list.html?cate=dianying&ajax=1").then((res)=>{
@@ -29,15 +29,12 @@ class Film extends Component{
 				playinglist:res.data.data
 			})
 
-
-			// this.setState({
-			
-			// })
-		})
-	}
+			})}
 
 
-	
+
+
+
 	render() {
 		return (
 
@@ -85,6 +82,7 @@ class Film extends Component{
 
 				</div>
 				<div className="main">
+
 				<div className="nowplaying">
 
 	            	{
@@ -100,13 +98,13 @@ class Film extends Component{
 	            		)
 	            	}
 	            </div>
+
 				</div>
 				<section className={this.state.isShow?'show':'hide'}
 					style={{display:this.state.isFirstShow?'block':'none'}}
 				>
 					{this.props.children}
 				</section>
-
 				<Footer></Footer>
 			</div>
 		)
