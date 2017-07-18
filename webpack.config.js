@@ -20,6 +20,7 @@ module.exports = {
         historyApiFallback: true,
 
             //配置服务器支持反向代理功能
+
         proxy:{'/index.php': {
                   target: 'http://m.1c10.cn',
                   host: 'm.1c10.cn',

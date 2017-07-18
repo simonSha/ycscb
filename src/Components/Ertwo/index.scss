@@ -15,13 +15,16 @@ ul,ol,dl,li,dd,dt{
     list-style: none;
 }
 #two{
+	width: 100%;
+	height: 500px;
+	
 	ul{
 		width: 100%;
 		background: #fff;
 		li{
 			height: R(60px);
 			font-size: 15px;
-			margin-top:R(15px);
+			padding-top:R(15px);
 			padding-left:R(20px);
 			border-bottom:1px solid #ccc;
 			a{

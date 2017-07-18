@@ -27,12 +27,20 @@ input{
 	.er{
 		width: 100%;
 		position: fixed;
+
 		top:R(196px);
+
+		
+
 		ul{
 			width: 100%;
 			height: R(76px);
 			line-height: R(76px);
+
 			background: skyblue;
+
+			
+
 			li{
 				width: 100%;
 				float: left;
@@ -60,8 +68,13 @@ input{
 	
 	section{
 		width: 100%;
+		
 		position:fixed;
+
 		top:R(267px);
+
+		
+
 		
 
 	}
@@ -72,7 +85,6 @@ input{
 .show{
 	// display: block;
 	animation:kerwinshow 1s both;
-
 
 }
 
@@ -107,6 +119,7 @@ input{
 	}
 }
 
+<<<<<<< HEAD
 .f60{
 	color:#f60;
 	
@@ -172,3 +185,4 @@ img{
 		margin-right: R(30px);
 	}
 }
+

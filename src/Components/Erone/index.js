@@ -1,5 +1,7 @@
 import React,{Component} from "react";
 import "./index.scss";
+import axios from "axios";
+
 import {
 	NavLink
 } from "react-router-dom";
@@ -7,6 +9,27 @@ import {
 class Erone extends Component{
 	constructor(props) {
 		super(props);
+		this.state = {
+			onelist:[],
+			oneFenlei:[]
+		}
+		
+	}
+
+	componentDidMount() {
+		axios.get("/index.php?act=list&op=getYouhuiClass&cate=meishi").then((res)=>{
+			this.setState({
+				onelist:res.data.data.cate.data,
+				onelistUl:res.data.data.cate.sub
+
+			})
+			 
+			 console.log(this.state.onelistUl);
+
+			
+		})
+
+		
 		
 	}
 
@@ -15,36 +38,20 @@ class Erone extends Component{
 		return (
 
 			<div id="one">
-				<ul>
-					<li>
-						<NavLink to="/all" >全部（464）</NavLink>
-					</li>
-					<li>
-						<NavLink to="/new" >今日新单（0）</NavLink>
-					</li>
-					<li>
-						<NavLink to="/food" >美食（150）</NavLink>
-					</li>
-					<li>
-						<NavLink to="/ktv" >娱乐休闲（54）</NavLink>
-					</li>
-					<li>
-						<NavLink to="/film" >电影（13）</NavLink>
-					</li>
-					<li>
-						<NavLink to="/hotel" >酒店（50）</NavLink>
-					</li>
-					<li>
-						<NavLink to="/quan" >优惠券（131）</NavLink>
-					</li>
-					<li>
-						<NavLink to="/life" >丽人养生（65）</NavLink>
-					</li>
-					<li>
-						<NavLink to="/travel" >旅游（1）</NavLink>
-					</li>
-				</ul>
-			
+				
+					{
+						this.state.onelist.map((item,index)=>
+							<ul>
+
+							
+							<li className="oneli1" key={item.id}>{item.name} <span>({item.count})</span> 
+
+							</li>
+
+							</ul>
+						)		
+					}	
+
 				<section>
 						{this.props.children}
 				</section>		
