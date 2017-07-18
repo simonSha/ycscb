@@ -23,7 +23,7 @@ class Film extends Component{
 		axios.get("/list.html?cate=dianying&ajax=1").then((res)=>{
 			
 			 console.log(res.data);
-			 console.log(res.data.data.title);
+		
 			 this.setState({
 				playinglist:res.data.data
 			})
@@ -88,10 +88,13 @@ class Film extends Component{
 
 	            	{
 	            		this.state.playinglist.map((item,index)=>
-	            			<div>
-
-	            			<img src={item.image_240} key={item.id}/>
-	            			<h3>{item.title}</h3>
+	            			<div id="dy">
+	            			    <img src={item.image_240} key={item.id}/>
+		            			
+			            			<h3 className="dy1">{item.store_name}{item.msg_name}</h3>
+			            			<h3 className="dy2">{item.subtitle}</h3>
+			            			<h3 className="dy3">￥{item.price}/<span style={{textDecoration:"line-through"}}>{item.origin_price}</span>{item.buy_num}</h3>
+		            			
 	            			</div>
 	            			
 	            		)
