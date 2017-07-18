@@ -64,9 +64,9 @@ class Home extends Component{
 				<div className="slide">
 					<ReactSwipe className="carousel" swipeOptions={{continuous: true,speed: 400,
 	  				auto: 3000,}} key={3}>
-		                <div>PANE 1</div>
-		                <div>PANE 2</div>
-		                <div>PANE 3</div>
+		                <div id="tp1">PANE 1</div>
+		                <div id="tp2">PANE 2</div>
+		                <div id="tp3">PANE 3</div>
 	            	</ReactSwipe>
 				</div>
 

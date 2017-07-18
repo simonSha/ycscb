@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import "./index.scss";
-import axios from "axios";
+
 import "../../assets/iconfont/iconfont.css";
 
 import Header from "../Header/index";

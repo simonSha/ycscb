@@ -19,8 +19,8 @@ class Footer extends Component{
 				<footer>
 					<div className="up">
 						<ul>
-							<li><NavLink to="/denglu" >登录</NavLink></li>
-							<li><NavLink to="/zhuce" >注册</NavLink></li>
+							<li><NavLink to="/user/denglu" >登录</NavLink></li>
+							<li><NavLink to="/user/zhuce" >注册</NavLink></li>
 						</ul>						
 						<span><NavLink to="/map" >桐乡<i className="iconfont icon-moreunfold"></i></NavLink></span>
 						<p>城市：</p>
