@@ -1,0 +1,87 @@
+$ui-width:750px;
+	@function R($px) {
+		@return $px/$ui-width*7.5rem;
+	}
+
+
+
+body{overflow:hidden;}
+
+#fu{
+	.zhanghu{
+		width: 100%;
+		height:R(200px);
+		background-image: url(../../assets/img/my-photo.png);
+		background-repeat:cover;
+		margin-top: R(90px);
+		position:relative;
+	}
+	.zhanghu img{
+		width:R(150px);
+		height: R(150px);
+		border-radius:50%;
+		margin:R(20px) R(50px)
+	}
+	.zhanghu .zhm{
+		display: inline-block;
+		position:absolute;
+		top:R(40px)
+		}
+	.zhanghu .ye{
+		display: inline-block;
+		position:absolute;
+		top:R(100px)
+	}
+	.you{
+		width: 100%;
+		height: R(400px);
+		margin-top:R(20px);
+	}
+	.you li{
+		display:flex;
+		justify-content:space-between;
+		align-items:center;
+		height: R(80px);
+
+
+		}
+	.you li i{margin-left:R(20px)}
+	.you li img{
+		margin-right:R(20px);
+		width: 5px;
+
+		}
+	.you .you_1{
+		width: 100%;
+		border-top:1px solid #e9e9e9;
+		border-bottom:1px solid #e9e9e9;
+				background:#fff;
+
+
+	}
+	.you .you_2{
+		width: 100%;
+		border-bottom:1px solid #e9e9e9;
+		background:#fff;
+
+	}
+	.you .you_3{
+		width: 100%;
+		border-bottom:1px solid #e9e9e9;
+		margin-top: R(50px);
+		background:#fff;
+
+	}
+
+	}
+	
+
+
+
+
+
+
+
+
+
+
