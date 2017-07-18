@@ -4,7 +4,7 @@ import "../../assets/iconfont/iconfont.css";
 
 import Header from "../Header/index";
 import "../Footer/index.scss";
-
+import axios from "axios";
 import Footer from "../Footer/index";
 import "../Footer/index.scss";
 import {
@@ -17,9 +17,22 @@ class Food extends Component{
 		this.state = {
 			isShow:false,
 			isFirstShow:false,
-			iClass: false
+			iClass: false,
+			playinglist:[]
 		}
 	}
+
+	componentDidMount() {
+		axios.get("/list.html?cate=meishi&ajax=1").then((res)=>{
+			
+			 console.log(res.data);
+		
+			 this.setState({
+				playinglist:res.data.data
+			})
+
+			})}
+
 
 
 	render() {
@@ -71,56 +84,30 @@ class Food extends Component{
 				</div>
 				<main>
 				
-				<ul>
-					<li>
-						<NavLink to="/list" >
-						<img />
-						<ul>
-							<li>
-							<p>老乡长传家菜</p>
-							<span>新世纪公园</span>
-							</li>
-							<li>老香樟传家菜全场8.5折！</li>
-							<li>
-							<h3>￥0</h3><p>/ 0</p>
-							<span>7</span><i className="iconfont icon-account"></i>
-							</li>
-						</ul>
-						</NavLink>
-					</li>
-					<li>
-						<NavLink to="/list" >
-						<img />
-						<ul>
-							<li>
-							<p>老乡长传家菜</p>
-							<span>新世纪公园</span>
-							</li>
-							<li>老香樟传家菜全场8.5折！</li>
-							<li>
-							<h3>￥0</h3><p>/ 0</p>
-							<span>7</span><i className="iconfont icon-account"></i>
-							</li>
-						</ul>
-						</NavLink>
-					</li>
-					<li>
-						<NavLink to="/list" >
-						<img />
-						<ul>
-							<li>
-							<p>老乡长传家菜</p>
-							<span>新世纪公园</span>
-							</li>
-							<li>老香樟传家菜全场8.5折！</li>
-							<li>
-							<h3>￥0</h3><p>/ 0</p>
-							<span>7</span><i className="iconfont icon-account"></i>
-							</li>
-						</ul>
-						</NavLink>
-					</li>
-				</ul>
+				<div className="nowplaying">
+
+	            	{
+	            		this.state.playinglist.map((item,index)=>
+	            			<div id="dy">
+	            			    <img src={item.image_240} key={item.id}/>
+			            			<p className="dy1">{item.store_name}{item.msg_name}</p>
+			            			<p className="dy2">{item.subtitle}</p>
+			            			<p className="dy3">
+			            				<span className="sa">
+			            					<i className="i">￥</i>{item.price}
+			            				</span>			            				
+			            				<span style={{textDecoration:"line-through"}} className="sp">
+			            					 <b>/</b>
+			            					 <del>{item.origin_price}</del>
+			            				</span>
+			            				<span className="an">{item.buy_num}</span>
+			            			</p>
+		            			
+	            			</div>
+	            			
+	            		)
+	            	}
+	            </div>
 				</main>
 				<section className={this.state.isShow?'show':'hide'}
 					style={{display:this.state.isFirstShow?'block':'none'}}

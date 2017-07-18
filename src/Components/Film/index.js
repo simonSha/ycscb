@@ -89,9 +89,18 @@ class Film extends Component{
 	            		this.state.playinglist.map((item,index)=>
 	            			<div id="dy">
 	            			    <img src={item.image_240} key={item.id}/>
-			            			<h3 className="dy1">{item.store_name}{item.msg_name}</h3>
-			            			<h3 className="dy2">{item.subtitle}</h3>
-			            			<h3 className="dy3">￥{item.price}/<span style={{textDecoration:"line-through"}}>{item.origin_price}</span>{item.buy_num}</h3>
+			            			<p className="dy1">{item.store_name}{item.msg_name}</p>
+			            			<p className="dy2">{item.subtitle}</p>
+			            			<p className="dy3">
+			            				<span className="sa">
+			            					<i className="i">￥</i>{item.price}
+			            				</span>			            				
+			            				<span style={{textDecoration:"line-through"}} className="sp">
+			            					 <b>/</b>
+			            					 <del>{item.origin_price}</del>
+			            				</span>
+			            				<span className="an">{item.buy_num}</span>
+			            			</p>
 		            			
 	            			</div>
 	            			

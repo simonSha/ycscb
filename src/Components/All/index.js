@@ -6,6 +6,7 @@ import "../Footer/index.scss";
 import {
 	NavLink
 } from "react-router-dom";
+import axios from "axios";
 
 class All extends Component{
 	constructor(props) {
@@ -13,9 +14,20 @@ class All extends Component{
 		this.state = {
 			isShow:false,
 			isFirstShow:false,
-			iClass: false
+			iClass: false,
+			playinglist:[]
 		}
 	}
+	componentDidMount() {
+		axios.get("/list.html?ajax=1").then((res)=>{
+			
+			 console.log(res.data);
+		
+			 this.setState({
+				playinglist:res.data.data
+			})
+
+			})}
 
 
 	render() {
@@ -65,9 +77,30 @@ class All extends Component{
 
 				</div>
 				<div className="main">
-				food
-				food
-				dood
+				<div className="nowplaying">
+
+	            	{
+	            		this.state.playinglist.map((item,index)=>
+	            			<div id="dy">
+	            			    <img src={item.image_240} key={item.id}/>
+			            			<p className="dy1">{item.store_name}{item.msg_name}</p>
+			            			<p className="dy2">{item.subtitle}</p>
+			            			<p className="dy3">
+			            				<span className="sa">
+			            					<i className="i">￥</i>{item.price}
+			            				</span>			            				
+			            				<span style={{textDecoration:"line-through"}} className="sp">
+			            					 <b>/</b>
+			            					 <del>{item.origin_price}</del>
+			            				</span>
+			            				<span className="an">{item.buy_num}</span>
+			            			</p>
+		            			
+	            			</div>
+	            			
+	            		)
+	            	}
+	            </div>
 				</div>
 				<section className={this.state.isShow?'show':'hide'}
 					style={{display:this.state.isFirstShow?'block':'none'}}
