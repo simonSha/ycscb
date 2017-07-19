@@ -43,7 +43,10 @@ class All extends Component{
 
 	            	{
 	            		this.state.playinglist.map((item,index)=>
-	            			<div id="dy">
+	            			<div id="dy" key={item.id} onClick={()=>{
+									//js跳转页面的方法 ,es6 字符串模板的写法
+									this.props.history.push(`/list/${item.id}`)
+								}}>
 	            			    <img src={item.image_240} key={item.id}/>
 			            			<p className="dy1">{item.store_name}{item.msg_name}</p>
 			            			<p className="dy2">{item.subtitle}</p>

@@ -60,7 +60,7 @@ const router = (
 				<Route path="/new" component={New}/>
 				<Route path="/denglu" component={Denglu}/>
 				
-				<Route path="/list:likeID" component={List}/>
+				<Route path="/list/:likeID" component={List}/>
 				<Route path="/car" component={Car}/>
 				<Route path="/header" component={Header}/>
 				<Route path="/footer" component={Footer}/>

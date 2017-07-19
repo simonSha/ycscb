@@ -26,20 +26,7 @@ class Food extends Component{
 
 	}
 
-	componentDidMount() {
-		axios.get("/index.php?act=list&op=getYouhuiClass&cate=meishi").then((res)=>{
-			 console.log(res.data.data.cate.data);
-			// this.setState({
-			
-			// })
-		}),
-		axios.get("/list.html?cate=meishi&ajax=1").then((res)=>{
-			 console.log(res.data);
-			// this.setState({
-			
-			// })
-		})
-	}
+
 
 	componentDidMount() {
 		axios.get("/list.html?cate=meishi&ajax=1").then((res)=>{
@@ -67,7 +54,10 @@ class Food extends Component{
 
 	            	{
 	            		this.state.playinglist.map((item,index)=>
-	            			<div id="dy">
+	            			<div id="dy" key={item.id} onClick={()=>{
+									//js跳转页面的方法 ,es6 字符串模板的写法
+									this.props.history.push(`/list/${item.id}`)
+								}}>
 	            			    <img src={item.image_240} key={item.id}/>
 			            			<p className="dy1">{item.store_name}{item.msg_name}</p>
 			            			<p className="dy2">{item.subtitle}</p>
