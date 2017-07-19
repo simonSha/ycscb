@@ -132,7 +132,7 @@ class Home extends Component{
 	            	{
 	            		this.state.playinglist.map((item,index)=>
 	            			<div id="dy">
-	            			    <img src={item.image_240} key={item.id}/>
+	            			    <img src={item.image_240}/>
 			            			<p className="dy1">{item.store_name}{item.msg_name}</p>
 			            			<p className="dy2">{item.subtitle}</p>
 			            			<p className="dy3">

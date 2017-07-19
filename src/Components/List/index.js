@@ -5,6 +5,7 @@ import "../Footer/index.scss";
 import img1 from "./img/1.jpg";
 import "../../assets/iconfont/iconfont.css";
 import axios from "axios";
+
 class List extends Component{
 	constructor(props) {
 		super(props);
@@ -16,29 +17,24 @@ class List extends Component{
 			dazhe:[],
 			
 		}
-		
-		
 	}
-
-	componentDidMount() {
-		axios.get("index.php?act=deal&op=index&id=6206&ajax=1").then((res)=>{
-			
-			 console.log(res.data);
-			 
-			 this.setState({
+    componentDidMount() {
+		//当前页面传来的参数通过以下方法获取
+		console.log(this.props.match.params);
+		axios.get("index.php?act=deal&op=index&id="+this.props.match.params.likeID+"&ajax=1").then(res=>{
+			console.log(res.data);
+			this.setState({
 				playinglist:res.data.buyinfo_list,
 				asd:res.data.youhui_info,
 				add:res.data.store,
 				dazhe:res.data.table_list
 
 			})
-
-
-			// this.setState({
 			
-			// })
 		})
 	}
+
+	
 
 
 
@@ -47,7 +43,7 @@ class List extends Component{
 			
 
 			<div id="List">
-				<div className="head">
+			<div className="head">
 				{
 	            		
 	            			
@@ -149,9 +145,11 @@ class List extends Component{
 					</div>
 
 				<Footer></Footer>		
+						
 			</div>
 		)
 	}
 }
 
 export default List;
+	
