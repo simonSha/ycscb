@@ -11,12 +11,23 @@ $ui-width:750px;
 #List{
 
 	.head{
-		padding-top: R(196px);
+		// padding-top: R(196px);
+	}
+	.img{
+		width: R(750px);
+		height: R(384px);
+		background:#f5f5f5;
+		img{
+			width:R(640px);
+			height: R(384px);
+			display:block;
+			padding:0 R(55px); 
+		}
 	}
 	.money{
 		border-bottom:2px solid #e8e8e8;
-		margin-top: R(-10px);
 		background:#fff;
+		overflow: hidden;
 		.jiage{
 			font-size: 20px;
 			font-weight: bold;
@@ -38,7 +49,7 @@ $ui-width:750px;
 			float: right;
 			background:#f64744;
 			color: #fff;
-			margin-top: R(10px);
+			margin-top: R(40px);
 			font-size: 20px;
 			border:0;
 			border-radius:3px;
@@ -47,10 +58,10 @@ $ui-width:750px;
 	}
 	.youhui{
 		
-		border-bottom:2px solid #e8e8e8;
+		border-bottom:2px solid #ccc;
 		margin-top:R(20px);
 		margin-left:R(20px);
-		// margin-bottom:R(20px);
+
 		margin-right: R(20px);
 		.one{
 			font-size:18px;
@@ -68,8 +79,10 @@ $ui-width:750px;
 	}
 
 	.people{
+		
 		background:#fff;
 		border-bottom:2px solid #e8e8e8;
+		border-top:2px solid #e8e8e8;
 		margin-top: R(-20px);
 		i{
 			margin-left: R(20px);
@@ -78,8 +91,8 @@ $ui-width:750px;
 			font-size:12px;
 			color:#b3b3b3;
 			padding-left:R(10px);
-			line-height:60px;
-			padding-top:R(40px);
+			line-height:30px;
+			padding-top:R(20px);
 	
 		}
 	}
@@ -100,37 +113,36 @@ $ui-width:750px;
 		margin-top: R(20px);
 		border-top:2px solid #e8e8e8;
 		border-bottom:2px solid #e8e8e8;
+    	padding-left:R(20px);
+    	overflow: hidden;
 		.phone2{
 			border-right:2px solid  #e8e8e8;
-			margin-right: R(130px);
-			margin-top: R(20px);
-			margin-bottom: R(20px);
+			width: R(595px);
+			float: left;
 			.add{
-			 color: #000;
-			 // border-right:2px solid #ccc;
-			.one{
-				padding-top: R(20px);
-				padding-left:R(20px);
-				font-size:14px;
-				line-height: 22px;
+				 color: #000;
+		
+				.one{
+					padding-top: R(20px);
+					font-size:14px;
+					line-height: 22px;
+					}
+				.two{ 
+					font-size:15px;
+					color:#878787;
+					}
+				}
 			}
-			.two{ 
-				padding-bottom: R(60px);
-				padding-left:R(20px);
-				font-size:15px;
-				color:#878787;
-			}
-		}
-	}
 		.tell{
 			background:#fff;
-				width: R(120px);
-				position: absolute;
+				width: R(114px);
+				height: R(130px);
 				top: R(24px);
-				bottom: R(-1150px);
 				right: R(20px);
 				background: url(img/icon-tel.png) no-repeat center center;
 				background-size: 22px 23px;
+				float: right;
+				margin-right: R(16px);
 		}
 	}
 	.dazhe{
@@ -231,12 +243,12 @@ $ui-width:750px;
 		
 	
 	.butn{
-		margin-top: R(20px);
+		margin-top: R(-20px);
 		margin-bottom: R(20px);
 		button{
 			height: 40px;
 			line-height: 40px;
-			width: 394px;
+			width: R(700px);
 			background:#f64744;
 			margin-left: R(20px);
 			border-radius:3px;

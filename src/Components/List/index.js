@@ -15,6 +15,10 @@ class List extends Component{
 			asd:[],
 			add:[],
 			dazhe:[],
+			dazhe1:[],
+			youhui:[],
+			youhui2:[]
+			
 			
 		}
 	}
@@ -23,11 +27,17 @@ class List extends Component{
 		console.log(this.props.match.params);
 		axios.get("index.php?act=deal&op=index&id="+this.props.match.params.likeID+"&ajax=1").then(res=>{
 			console.log(res.data);
+
 			this.setState({
 				playinglist:res.data.buyinfo_list,
 				asd:res.data.youhui_info,
 				add:res.data.store,
-				dazhe:res.data.table_list
+				dazhe:res.data.table_list[0],
+				dazhe1:res.data.table_list[0].data[0].list[0],
+				youhui:res.data.youhui_other[0]?(res.data.youhui_other[0]):(''),
+				youhui2:res.data.youhui_other[1]?(res.data.youhui_other[1]):('')
+				
+
 
 			})
 			
@@ -43,46 +53,32 @@ class List extends Component{
 			
 
 			<div id="List">
-			<div className="head">
-				{
-	            		
-	            			
 
-	            			<div>
-	            			<h3>{this.state.playinglist.info}</h3>
-	            				
-	            			</div>
-	            			
-	            		
-	            	}
-
-
-				</div>
 			<div className="img">
-			<img src={img1}/>
-				</div>
-				<div className="money">
-					<span className="jiage">￥</span>
-					<span className="zero">0</span>
-					<span className="em">/0</span>
-					<button>立即抢购</button>
-				</div>
+				<img  src={this.state.asd.image_320}/>
+			</div>
+			<div className="money">
+				<span className="jiage">￥</span>
+				<span className="zero">{this.state.asd.price}</span>
+				<span className="em">/{this.state.asd.origin_price}</span>
+				<button>立即抢购</button>
+			</div>
 
-				<div className="youhui">
-					<p className="one">{this.state.asd.msg_name}{this.state.asd.msg_name}</p>
-					<p className="two">{this.state.asd.subtitle}</p>
-				</div>
+			<div className="youhui">
+				<p className="one">{this.state.asd.msg_name}{this.state.asd.msg_name}</p>
+				<p className="two">{this.state.asd.subtitle}</p>
+			</div>
 
-				<div className="people">
+			<div className="people">
 				<span className="shop">
-					<i className="iconfont icon-account"></i>
-					7人已购买</span>
-				</div>
+				<i className="iconfont icon-account"></i>
+				7人已购买</span>
+			</div>
 
 
-				<div className="star">
-					<p>暂无评价</p>
-				</div>
+			<div className="star">
+				<p>暂无评价</p>
+			</div>
 
 				<div className="phone">
 					<div className="phone2">
@@ -91,20 +87,20 @@ class List extends Component{
 						<p className="two">{this.state.add.address}</p>
 						</a>
 					</div>
-						<a className="tell"></a>
+					<a className="tell"></a>
 				</div>
 
 				<div className="dazhe">
-					<span className="left">全场8.5折</span>
-					<span className="right1">￥0</span>
-					<span className="right2">￥0</span>
+					<span className="left">{this.state.dazhe.name}</span>
+					<span className="right1">￥{this.state.dazhe.origin_price}</span>
+					<span className="right2">￥{this.state.dazhe.price}</span>
 				</div>
 
 				<div className="drink">
 					
-						<span className="first">全场8.5折（酒水饮料除外）</span>
-						<span className="second">1份</span>
-						<span className="third">元</span>
+						<span className="first">{this.state.dazhe1.name}</span>
+						<span className="second">{this.state.dazhe1.amount}</span>
+						<span className="third">{this.state.dazhe1.subtotal}元</span>
 				</div>
 
 				<div className="look">
@@ -136,12 +132,12 @@ class List extends Component{
 					<p>本商家其他优惠</p>
 				</div>
 				<div className="t1">
-					<p className="t1_1">超值套餐2选1，美味停不下来！</p>
-					<span>￥158</span>
+					<p className="t1_1">{this.state.youhui.subtitle?(this.state.youhui.subtitle):('')}</p>
+					<span>￥{this.state.youhui.price}</span>
 				</div>
 				<div className="t2">
-					<p className="t2_2">4-6人餐，欢迎您和朋友一起来尝尝味道！</p>
-					<span>￥158</span>
+					<p className="t2_2">{this.state.youhui2.subtitle?(this.state.youhui2.subtitle):('')}</p>
+					<span>￥{this.state.youhui2.price}</span>
 					</div>
 
 				<Footer></Footer>		
