@@ -1,4 +1,3 @@
-
 import React from "react";
 import Home from "./Components/Home/index";
 import All from "./Components/All/index";
@@ -38,13 +37,7 @@ const router = (
 		<App>
 			<Switch>
 				<Route path="/home" component={Home}/>
-				<Route path="/food" render={()=>
-					<Food>						
-						<Route path="/food/erone" component={Erone}/>
-						<Route path="/food/ertwo" component={Ertwo}/>
-						<Route path="/food/erthree" component={Erthree}/>						
-					</Food>
-				}/>					
+				<Route path="/food" component={Food}/>					
 				<Route path="/all" component={All}/>
 				<Route path="/film" component={Film}/>
 				<Route path="/hotel" component={Hotel}/>
@@ -67,22 +60,18 @@ const router = (
 				<Route path="/new" component={New}/>
 				<Route path="/denglu" component={Denglu}/>
 				
-				<Route path="/list/:likeID" component={List}/>
+				<Route path="/list:likeID" component={List}/>
 				<Route path="/car" component={Car}/>
 				<Route path="/header" component={Header}/>
 				<Route path="/footer" component={Footer}/>
-				<Route path="/navv" render={()=>
-					<Navv>						
-						<Route path="/navv/erone" component={Erone}/>
-						<Route path="/navv/ertwo" component={Ertwo}/>
-						<Route path="/navv/erthree" component={Erthree}/>						
-					</Navv>
-				}/>					
+				<Route path="/navv" component={Navv}/>
+					
 				<Redirect from="/" to='/home'/>																
 
 			</Switch>				
 		</App>
 	</Router>
 )
+
 
 export default router;

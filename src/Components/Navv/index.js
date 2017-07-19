@@ -6,9 +6,6 @@ import "../../assets/iconfont/iconfont.css";
 import Header from "../Header/index";
 import "../Footer/index.scss";
 
-import Footer from "../Footer/index";
-import "../Footer/index.scss";
-
 import {
 	NavLink
 } from "react-router-dom";
@@ -17,10 +14,15 @@ class Navv extends Component{
 	constructor(props) {
 		super(props);
 		this.state = {
-			isShow:false,
-			isFirstShow:false,
+			isShow1:false,
+			isShow2:false,
+			isShow3:false,
+			isFirstShow1:false,
+			isFirstShow2:false,
+			isFirstShow3:false,
 			iClass: false,
 			onelist:[],
+			twolist:[],
 			onelistli:[]
 		}
 
@@ -31,7 +33,8 @@ class Navv extends Component{
 			console.log(res.data.data.cate.sub[1]);
 			this.setState({
 				onelist:res.data.data.cate.data,
-				onelistli:res.data.data.cate.sub[1]
+				onelistli:res.data.data.cate.sub[1],
+				twolist:res.data.data.city.data,
 			})
 			 
 			 console.log(this.state.onelistli);
@@ -45,134 +48,93 @@ class Navv extends Component{
 		return (
 
 			<div id="navv">
-			<Header></Header>
+
+				<Header></Header>
+
 				<div className="er">
+
 					<ul className="ul">
+
 						<li className="li" onClick={
  							()=>{
  								this.setState({
- 									isShow:!this.state.isShow,
- 									isFirstShow:true
+ 									isShow1:!this.state.isShow1,
+ 									isFirstShow1:true,
+ 									isShow2:false,
+ 									isShow3:false
  									
  								})
  							}
-						} >
-							分类<i className="iconfont icon-moreunfold"></i>
+ 						} >分类<i className="iconfont icon-moreunfold"></i>
+						
+								
+						</li>
+						<li className="li" onClick={
+ 							()=>{
+ 								this.setState({
+ 									isShow2:!this.state.isShow2,
+ 									isFirstShow2:true,
+ 									isShow1:false,
+ 									isShow3:false
+ 									
+ 									
+ 								})
+ 							}
+						}>商圈<i className="iconfont icon-moreunfold"></i>
+														
+						</li>
 
-							<ul className="onelistt">
+						<li className="lastli2 li"  onClick={
+ 							()=>{
+ 								this.setState({
+ 									isShow3:!this.state.isShow3,
+ 									isFirstShow3:true,
+ 									isShow1:false,
+ 									isShow2:false			
+ 								})
+ 							}
+						}>默认排序<i className="iconfont icon-moreunfold"></i>
+													
+						</li>
+					</ul>
+				</div>
+
+				<ul className={this.state.isShow1?'show oneul':'hide oneul'}
+					style={{display:this.state.isFirstShow1?'block':'none'}}
+				>
 							{
 								this.state.onelist.map((item,index)=>
 									
-
-									<li key={item.name} className="navvli" >{item.name} <span>({item.count})</span>
-										
-										{
-											
-											this.state.onelistli.map((ite,index)=>
-												<ul className="onelisttul" key={ite.length}>
-												<li key={ite.name} className="navvlili" >{ite.name} <span>({ite.count})</span></li>
-												</ul>
-											)	
-											
-										}	
-											
+									<li key={item.name} className="oneul_li" >{item.name} <span>({item.count})</span>
+												
 									</li>									
 								)		
 							}
 							
-							</ul>
-							
-
-
-							
-							
-						</li>
-						<li className="li" onClick={
- 							()=>{
- 								this.setState({
- 									isShow:!this.state.isShow,
- 									isFirstShow:true,
- 									iClass:true
- 									
- 								})
- 							}
-						}>
-							<NavLink to="/food/ertwo" >商圈
-							<i className="iconfont icon-moreunfold"></i></NavLink>
-						</li>
-						<li className="lastli2 li" onClick={
- 							()=>{
- 								this.setState({
- 									isShow:!this.state.isShow,
- 									isFirstShow:true				
- 								})
- 							}
-						}>
-							<NavLink to="/food/erthree" >默认排序
-							<i className="iconfont icon-moreunfold"></i></NavLink>
-						</li>
-					</ul>
-
-				</div>
-				<main>
-				
-				<ul>
-					<li>
-						<NavLink to="/list" >
-						<img />
-						<ul>
-							<li>
-							<p>老乡长传家菜</p>
-							<span>新世纪公园</span>
-							</li>
-							<li>老香樟传家菜全场8.5折！</li>
-							<li>
-							<h3>￥0</h3><p>/ 0</p>
-							<span>7</span><i className="iconfont icon-account"></i>
-							</li>
-						</ul>
-						</NavLink>
-					</li>
-					<li>
-						<NavLink to="/list" >
-						<img />
-						<ul>
-							<li>
-							<p>老乡长传家菜</p>
-							<span>新世纪公园</span>
-							</li>
-							<li>老香樟传家菜全场8.5折！</li>
-							<li>
-							<h3>￥0</h3><p>/ 0</p>
-							<span>7</span><i className="iconfont icon-account"></i>
-							</li>
-						</ul>
-						</NavLink>
-					</li>
-					<li>
-						<NavLink to="/list" >
-						<img />
-						<ul>
-							<li>
-							<p>老乡长传家菜</p>
-							<span>新世纪公园</span>
-							</li>
-							<li>老香樟传家菜全场8.5折！</li>
-							<li>
-							<h3>￥0</h3><p>/ 0</p>
-							<span>7</span><i className="iconfont icon-account"></i>
-							</li>
-						</ul>
-						</NavLink>
-					</li>
 				</ul>
-				</main>
-				<section className={this.state.isShow?'show':'hide'}
-					style={{display:this.state.isFirstShow?'block':'none'}}
+
+				<ul className={this.state.isShow2?'show twoul':'hide twoul'}
+					style={{display:this.state.isFirstShow2?'block':'none'}}
 				>
-					{this.props.children}
-				</section>
-				<Footer></Footer>
+							{
+								this.state.twolist.map((item,index)=>
+									
+									<li key={item.name} className="twoul_li" >{item.name} <span>({item.count})</span>
+												
+									</li>									
+								)		
+							}
+							
+				</ul>
+				<ul className={this.state.isShow3?'show threeul':'hide threeul'}
+					style={{display:this.state.isFirstShow3?'block':'none'}}
+				>
+					<li className="threeul_li">默认排序</li>
+				</ul>
+				<div>food</div>
+				
+
+				
 			</div>
 		)
 	}

@@ -23,9 +23,7 @@ class Food extends Component{
 
 			
 				<div id="map">
-				food
-				food
-				dood
+				
 				</div>
 			
 		)

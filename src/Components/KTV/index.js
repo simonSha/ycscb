@@ -3,6 +3,9 @@ import "./index.scss";
 import "../../assets/iconfont/iconfont.css";
 import Footer from "../Footer/index";
 import "../Footer/index.scss";
+
+import Navv from "../Navv/index";
+import "../Navv/index.scss";
 import {
 	NavLink
 } from "react-router-dom";
@@ -36,48 +39,7 @@ class KTV extends Component{
 		return (
 
 			<div id="ktv">
-				<div className="er">
-					<ul>
-						<li onClick={
- 							()=>{
- 								this.setState({
- 									isShow:!this.state.isShow,
- 									isFirstShow:true,
- 									
-
- 								})
- 							}
-						} className={this.state.iClass?'f60':''}>
-							<NavLink to="/food/erone" >分类
-							<i className="iconfont icon-moreunfold"></i></NavLink>
-						</li>
-						<li onClick={
- 							()=>{
- 								this.setState({
- 									isShow:!this.state.isShow,
- 									isFirstShow:true,
- 									iClass:true
- 									
- 								})
- 							}
-						}>
-							<NavLink to="/food/ertwo" >商圈
-							<i className="iconfont icon-moreunfold"></i></NavLink>
-						</li>
-						<li className="lastli2" onClick={
- 							()=>{
- 								this.setState({
- 									isShow:!this.state.isShow,
- 									isFirstShow:true				
- 								})
- 							}
-						}>
-							<NavLink to="/food/erthree" >默认排序
-							<i className="iconfont icon-moreunfold"></i></NavLink>
-						</li>
-					</ul>
-
-				</div>
+			<Navv></Navv>
 				<div className="main">
 				<div className="nowplaying">
 

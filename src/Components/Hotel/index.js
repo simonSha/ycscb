@@ -4,6 +4,9 @@ import "../../assets/iconfont/iconfont.css";
 import Footer from "../Footer/index";
 import "../Footer/index.scss";
 import axios from "axios";
+
+import Navv from "../Navv/index";
+import "../Navv/index.scss";
 import {
 	NavLink
 } from "react-router-dom";
@@ -34,57 +37,13 @@ class Hotel extends Component{
 		return (
 
 			<div id="hotel">
-				<div className="er">
-					<ul>
-						<li onClick={
- 							()=>{
- 								this.setState({
- 									isShow:!this.state.isShow,
- 									isFirstShow:true,
- 									
-
- 								})
- 							}
-						} className={this.state.iClass?'f60':''}>
-							<NavLink to="/food/erone" >分类
-							<i className="iconfont icon-moreunfold"></i></NavLink>
-						</li>
-						<li onClick={
- 							()=>{
- 								this.setState({
- 									isShow:!this.state.isShow,
- 									isFirstShow:true,
- 									iClass:true
- 									
- 								})
- 							}
-						}>
-							<NavLink to="/food/ertwo" >商圈
-							<i className="iconfont icon-moreunfold"></i></NavLink>
-						</li>
-						<li className="lastli2" onClick={
- 							()=>{
- 								this.setState({
- 									isShow:!this.state.isShow,
- 									isFirstShow:true				
- 								})
- 							}
-						}>
-							<NavLink to="/food/erthree" >默认排序
-							<i className="iconfont icon-moreunfold"></i></NavLink>
-						</li>
-					</ul>
-
-				</div>
+			<Navv></Navv>
 				<div className="main">
 				<div className="nowplaying">
 
 	            	{
 	            		this.state.playinglist.map((item,index)=>
-	            			<div id="dy"onClick={()=>{
-									//js跳转页面的方法 ,es6 字符串模板的写法
-									this.props.history.push(`/list/${item.id}`)
-								}}>
+	            			<div id="dy">
 	            			    <img src={item.image_240} key={item.id}/>
 			            			<p className="dy1">{item.store_name}{item.msg_name}</p>
 			            			<p className="dy2">{item.subtitle}</p>
@@ -115,5 +74,6 @@ class Hotel extends Component{
 		)
 	}
 }
+
 
 export default Hotel
