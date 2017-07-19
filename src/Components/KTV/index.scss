@@ -1,0 +1,65 @@
+$ui-width:750px;
+	@function R($px) {
+		@return $px/$ui-width*7.5rem;
+	}
+
+
+#film{
+	width:100%;
+
+	main{
+		padding-top: R(54px);
+	}
+
+}
+
+
+.show{
+	// display: block;
+	animation:kerwinshow 1s both;
+
+
+}
+
+
+@keyframes kerwinshow{
+	from{
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+
+	to{
+		transform: translateX(0px);	
+		opacity: 1;
+	}
+}
+
+.hide{
+	// display:none;
+	animation:kerwinhide 1s both;
+
+}
+
+@keyframes kerwinhide{
+	from{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+
+	to{
+		transform: translateX(-100%);	
+		opacity: 0;
+	}
+}
+
+.f60{
+	color:#f60;
+	
+}
+img{
+	width:118px;
+	height:79px;
+	display:inline-block;
+	position:absolute;
+
+}

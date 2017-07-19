@@ -1,0 +1,26 @@
+$ui-width:750px;
+	@function R($px) {
+		@return $px/$ui-width*7.5rem;
+	}
+
+
+
+#film{
+	width:100%;
+	
+
+	.main{
+		padding-top:R(272px);
+	}
+	
+	section{
+		width: 100%;
+		position:fixed;
+		top:R(267px);
+		
+
+	}
+
+}
+
+

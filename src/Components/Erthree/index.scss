@@ -1,0 +1,22 @@
+$ui-width:750px;
+	@function R($px) {
+		@return $px/$ui-width*7.5rem;
+	}
+
+
+#three{
+	ul{
+		width: 100%;
+		background: #fff;
+		li{
+			height: R(60px);
+			font-size: 15px;
+			padding-top:R(15px);
+			padding-left:R(20px);
+			border-bottom:1px solid #ccc;
+			a{
+				color:#171717;
+			}
+		}
+	}
+}
