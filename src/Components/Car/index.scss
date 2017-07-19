@@ -1,9 +1,0 @@
-$ui-width:750px;
-	@function R($px) {
-		@return $px/$ui-width*7.5rem;
-	}
-
-
-/*距离的格式比如width：10px写成width：R(20px)*/
-
-
