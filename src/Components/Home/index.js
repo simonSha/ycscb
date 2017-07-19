@@ -64,9 +64,9 @@ class Home extends Component{
 				<div className="slide">
 					<ReactSwipe className="carousel" swipeOptions={{continuous: true,speed: 400,
 	  				auto: 3000,}} key={3}>
-		                <div id="tp1">PANE 1</div>
-		                <div id="tp2">PANE 2</div>
-		                <div id="tp3">PANE 3</div>
+	  				<a href="javascript:void(0);"><div className="tp1" ></div></a>
+	  				<a href="http://group.1c10.cn/youhui/?act=list&k=%e7%81%ab%e9%94%85"><div className="tp2" ></div></a>
+	  				<a href="http://gpi.1c100.cn/jump/?id=10"><div className="tp3" ></div></a>
 	            	</ReactSwipe>
 				</div>
 
@@ -83,43 +83,43 @@ class Home extends Component{
 						<li>
 						<NavLink to="/film" ><a>
 							<img src={this.state.playinglist2.icon_url}/>
-							<p>美食</p>
+							<p>电影</p>
 						</a></NavLink>
 						</li>
 						<li>
 						<NavLink to="/hotel" ><a>
 							<img src={this.state.playinglist3.icon_url}/>
-							<p>美食</p>
+							<p>酒店</p>
 						</a></NavLink>
 						</li>
 						<li>
 						<NavLink to="/life" ><a>
 							<img src={this.state.playinglist4.icon_url}/>
-							<p>美食</p>
+							<p>丽人养生</p>
 						</a></NavLink>
 						</li>
 						<li>
 						<NavLink to="/travel" ><a>
 							<img src={this.state.playinglist5.icon_url}/>
-							<p>美食</p>
+							<p>旅游</p>
 						</a></NavLink>
 						</li>
 						<li>
 						<NavLink to="/quan" ><a>
 							<img src={this.state.playinglist6.icon_url}/>
-							<p>美食</p>
+							<p>代金券</p>
 						</a></NavLink>
 						</li>
 						<li>
 						<NavLink to="/ktv" ><a>
 							<img src={this.state.playinglist7.icon_url}/>
-							<p>美食</p>
+							<p>KTV</p>
 						</a></NavLink>
 						</li>
 						<li>
 						<NavLink to="/all" ><a>
 							<img src={this.state.playinglist8.icon_url}/>
-							<p>美食</p>
+							<p>全部优惠</p>
 						</a></NavLink>
 						</li>						
 					</ul>
