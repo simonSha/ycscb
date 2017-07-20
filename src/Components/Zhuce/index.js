@@ -8,7 +8,6 @@ class Zhuce extends Component{
 		
 	}
 
-
 	render() {
 		return (
 
@@ -27,12 +26,12 @@ class Zhuce extends Component{
 					</div>
 
 					<div className="yz">
-						<input type="text" className="yzm" placeholder="请输入收到的短信验证码"/>
+						<input ref="useryzm" type="text" className="yzm" placeholder="请输入收到的短信验证码"/>
 					</div>
 					<p className="p">请输入验证码</p>
 					<div className="pw">
-						<input type="password" className="psw" placeholder="请输入您的密码，长度至少六位"/>
-						<button className="btn" onClick={this.hclick.bind(this)}>
+						<input ref="userpsw" type="password" className="psw" placeholder="请输入您的密码，长度至少六位"/>
+						<button className="btn">
 							显示
 						</button>
 					</div>
@@ -42,7 +41,7 @@ class Zhuce extends Component{
 
 
 				<div className="wc">
-					<a className="a li1">
+					<a className="a li1" onClick={this.hclick.bind(this)}>
 						完成注册
 					</a>
 					<div className="bom">
@@ -56,8 +55,15 @@ class Zhuce extends Component{
 		)
 	}
 
+
+
 	hclick(){
-		console.log(this.refs.username.value)
+		var yzm = this.refs.useryzm.value;
+		var call = this.refs.username.value;
+		var psw = this.refs.userpsw.value;
+		console.log(this.refs.useryzm.value);
+		console.log(this.refs.username.value);
+		console.log(this.refs.userpsw.value);
 	}
 }
 
