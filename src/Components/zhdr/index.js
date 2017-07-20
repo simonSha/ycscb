@@ -1,11 +1,8 @@
 import React,{Component} from "react";
 import "./index.scss";
-import{
-	NavLink
-}from"react-router-dom";
 
-import Zhuce from "../zhuce/index"
-import Wjmm from "../wjmm/index"
+
+
 
 
 
@@ -21,7 +18,7 @@ class Zhdr extends Component{
 	render() {
 		return (
 
-			<div>
+			<div id="zhdr">
 				
 
 				<div className="q4">
@@ -29,8 +26,14 @@ class Zhdr extends Component{
 				<input className="q2" type="text" placeholder="密码"/>
 				<button className="q3">登录</button>
 					<p className="q5">
-						<NavLink className="left" to="/user/zhuce">免费注册</NavLink>
-						<NavLink className="right" to="/user/wjmm">忘记密码？</NavLink>
+						<a className="left" onClick={()=>{
+									//js跳转页面的方法 ,es6 字符串模板的写法
+									this.props.history.push(`/zhuce`)
+								}}>免费注册</a>
+						<a className="right" onClick={()=>{
+									//js跳转页面的方法 ,es6 字符串模板的写法
+									this.props.history.push(`/wjmm`)
+								}}>忘记密码？</a>
 					</p>
 				</div>
 				<div className="z3">

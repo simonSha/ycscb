@@ -1,103 +1,85 @@
 
+#zhdr{
+		.left{
+			float:left;
+		}
+		.right{
+			float:right;
+		}
+		
+		.q2{
+			width:100%;
+			height:44px;
+			box-sizing:border-box;
+			padding-left:10px;
+			border-radius:3px;
+			border:1px solid #e0e0e0;
+			margin-top:10px;
 
-.left{
-	float:left;
-}
-.right{
-	float:right;
-}
-.q1 .active{
-	display:inline-block;
-	background:white;
-	width:100%;
-	color:red;
-	height:100%;
+		}
+		.q3{
+			width:100%;
+			height:44px;
+			background:#F64744;
+			border-radius:3px;
+			border:1px solid #e0e0e0;
+			text-align:center;
+			color:white;
+			margin-top:10px;
+		}
+		.q4{
+			
+			padding:0 10px;
+			background:white;
+			padding-top:10px;
+		}
 
-}
-.q1 {
-	width:50%;
-	height:100%;
-	display:inline-block;
-	font-size:15px;
-	line-height:40px;
-	text-align:center;
-	color:#9b9b9b;
-}
-.q1 a{
-	color:#9b9b9b;
-}
-.q2{
-	width:100%;
-	height:44px;
-	box-sizing:border-box;
-	padding-left:10px;
-	border-radius:3px;
-	border:1px solid #e0e0e0;
-	margin-top:10px;
-
-}
-.q3{
-	width:100%;
-	height:44px;
-	background:#F64744;
-	border-radius:3px;
-	border:1px solid #e0e0e0;
-	text-align:center;
-	color:white;
-	margin-top:10px;
-}
-.q4{
-	
-	padding:0 10px;
-	background:white;
-	padding-top:10px;
-}
-
-.q5{
-	width:100%;
-	height:30px;
-	font-size:12px;
-	margin-top:10px;
+		.q5{
+			width:100%;
+			height:30px;
+			font-size:12px;
+			margin-top:10px;
 
 
-}
-.q5 a{
-	color:#296da1;
-}
-.z1{
-	text-align:center;
-	margin-top:14px;
-	color:#9b9b9b;
-	font-size:13px;
+		}
+		.q5 a{
+			color:#296da1;
+		}
+		.z1{
+			text-align:center;
+			margin-top:14px;
+			color:#9b9b9b;
+			font-size:13px;
 
-}
-.z2{
-	text-align:center;
-	display:block;
-	margin-top:10px;
-	border:1px solid #e0e0e0;
-	background:#fff;
-	color:#303030;
-	padding-top:4px;
-	padding-bottom:8px;
-	border-radius:3px;
-	font-size:14px;
-	width:100%;
-}
-.z2 span{
-	background:url(../../assets/img/qq_login.png);
-	background-size:cover;
-	display:inline-block;
-	width:22px;
-	height:24px;
-	position:relative;
-	top:2px;
-	right:10px;
-	vertical-align:text-bottom;
+		}
+		.z2{
+			text-align:center;
+			display:block;
+			margin-top:10px;
+			border:1px solid #e0e0e0;
+			background:#fff;
+			color:#303030;
+			padding-top:4px;
+			padding-bottom:8px;
+			border-radius:3px;
+			font-size:14px;
+			width:100%;
+		}
+		.z2 span{
+			background:url(../../assets/img/qq_login.png);
+			background-size:cover;
+			display:inline-block;
+			width:22px;
+			height:24px;
+			position:relative;
+			top:2px;
+			right:10px;
+			vertical-align:text-bottom;
 
-}
-.z3{
-	
-	padding:0 10px;
-	
-}
+		}
+		.z3{
+			
+			padding:0 10px;
+			
+		}
+	}

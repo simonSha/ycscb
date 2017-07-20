@@ -22,7 +22,7 @@ class Life extends Component{
 		}
 	}
 	componentDidMount() {
-		axios.get("/list.html?cate=lirenyangsheng&ajax=1").then((res)=>{
+		axios.get("/api/listfruit").then((res)=>{
 			
 			 console.log(res.data);
 		

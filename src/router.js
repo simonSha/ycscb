@@ -50,12 +50,14 @@ const router = (
 					<Switch>
 					<Route path="/user/zhdr" component={Zhdr}/>
 				    <Route path="/user/sjdxdr" component={Sjdxdr}/>
-				    <Route path="/user/zhuce" component={Zhuce}/>
-				    <Route path="/user/wjmm" component={Wjmm}/>
+				   
 				    <Redirect from="/user" to="/user/zhdr"/>
 				    </Switch>
 				    </User>
 				}/>
+				 <Route path="/zhuce" component={Zhuce}/>
+				 <Route path="/wjmm" component={Wjmm}/>
+				
 				<Route path="/map" component={Map}/>
 				<Route path="/new" component={New}/>
 				<Route path="/denglu" component={Denglu}/>

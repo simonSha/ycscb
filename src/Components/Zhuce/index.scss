@@ -23,7 +23,7 @@ $ui-width:750px;
 				float: right;
 				width: R(160px);
 				height: R(84px);
-				line-height: R(84px);
+				
 				color: #F64744;
 				background: #fff;
 				font-size: R(24px);
@@ -52,7 +52,7 @@ $ui-width:750px;
 			.yzm{
 				width: R(690px);
 				height: R(88px);
-				line-height: R(88px);
+				
 				border: R(2px) solid #e0e0e0;
 				border-radius: R(10px);
 				padding-left: R(20px);
@@ -68,7 +68,7 @@ $ui-width:750px;
 			.psw{
 				width: R(355px);
 				height: R(88px);
-				line-height: R(88px);
+				
 				padding-left: R(20px);
 				border: 0;
 			}
@@ -119,7 +119,8 @@ $ui-width:750px;
 			p{
 				display: inline-block;
 				position:absolute;
-				right: R(330px)
+				right: R(330px);
+				font-size: 14px;
 			}
 		}
 	}

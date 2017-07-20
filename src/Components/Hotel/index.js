@@ -22,7 +22,7 @@ class Hotel extends Component{
 		}
 	}
 	componentDidMount() {
-		axios.get("/list.html?cate=jiudianlvyou&ajax=1").then((res)=>{
+		axios.get("/api/supermarket").then((res)=>{
 			
 			 console.log(res.data);
 		

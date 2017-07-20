@@ -22,7 +22,7 @@ class Travel extends Component{
 		}
 	}
 	componentDidMount() {
-		axios.get("/list.html?cate=nianhuojiushui&ajax=1").then((res)=>{
+		axios.get("/api/listnew").then((res)=>{
 			
 			 console.log(res.data);
 		

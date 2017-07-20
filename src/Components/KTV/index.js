@@ -22,7 +22,7 @@ class KTV extends Component{
 		}
 	}
 	componentDidMount() {
-		axios.get("/list.html?cate=KTV&ajax=1").then((res)=>{
+		axios.get("/api/listlunch").then((res)=>{
 			
 			 console.log(res.data);
 		

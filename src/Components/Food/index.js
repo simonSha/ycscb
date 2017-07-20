@@ -29,7 +29,7 @@ class Food extends Component{
 
 
 	componentDidMount() {
-		axios.get("/list.html?cate=meishi&ajax=1").then((res)=>{
+		axios.get("/api/listmeishi").then((res)=>{
 			
 			 console.log(res.data);
 		

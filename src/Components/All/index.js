@@ -22,7 +22,7 @@ class All extends Component{
 		}
 	}
 	componentDidMount() {
-		axios.get("/list.html?ajax=1").then((res)=>{
+		axios.get("/api/indextuijian").then((res)=>{
 			
 			 console.log(res.data);
 		

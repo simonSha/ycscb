@@ -4,8 +4,8 @@ import{
 	NavLink
 }from"react-router-dom";
 
-import Zhdr from "../zhdr/index"
-import Sjdxdr from "../sjdxdr/index"
+
+
 
 
 class User extends Component{
@@ -18,7 +18,7 @@ class User extends Component{
 	render() {
 		return (
 
-			<div>
+			<div id="user">
 				
 				<div className="q1">
 				<NavLink to="/user/zhdr" activeClassName="active">账号登录</NavLink>
@@ -28,10 +28,9 @@ class User extends Component{
 				<div className="q1">
 				<NavLink to="/user/sjdxdr" activeClassName="active">手机短信登录</NavLink>
 				</div>
-				{ 
-					//预留的插槽
+					{
+						this.props.children
 					}
-					{this.props.children}
 			</div>
 			
 		)

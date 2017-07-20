@@ -25,7 +25,7 @@ class List extends Component{
     componentDidMount() {
 		//当前页面传来的参数通过以下方法获取
 		console.log(this.props.match.params);
-		axios.get("index.php?act=deal&op=index&id="+this.props.match.params.likeID+"&ajax=1").then(res=>{
+		axios.get("/api/xiangqingmamacai?chuanid="+this.props.match.params.likeID).then(res=>{
 			console.log(res.data);
 
 			this.setState({

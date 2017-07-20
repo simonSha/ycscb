@@ -22,7 +22,7 @@ class Quan extends Component{
 		}
 	}
 	componentDidMount() {
-		axios.get("/list.html?cate=daijinquanzhekouquan&ajax=1").then((res)=>{
+		axios.get("/api/listtimes").then((res)=>{
 			
 			 console.log(res.data);
 		

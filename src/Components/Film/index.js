@@ -24,7 +24,7 @@ class Film extends Component{
 
 	
 	componentDidMount() {
-		axios.get("/list.html?cate=dianying&ajax=1").then((res)=>{
+		axios.get("/api/listdrink").then((res)=>{
 			
 			 console.log(res.data);
 		

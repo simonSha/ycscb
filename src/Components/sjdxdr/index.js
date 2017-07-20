@@ -1,5 +1,8 @@
 import React,{Component} from "react";
 import "./index.scss";
+import{
+	NavLink
+}from"react-router-dom";
 
 
 
@@ -13,7 +16,7 @@ class Sjdxdr extends Component{
 	render() {
 		return (
 
-			<div>
+			<div id="sjdxdr">
 			<div className="q4">
 				<div className="a3">
 				<input className="a2" type="text" placeholder="请输入11位手机号码"/>
@@ -21,7 +24,16 @@ class Sjdxdr extends Component{
 				</div>
 				<input className="q2" type="text" placeholder="请输入收到的短信验证码"/>
 				<button className="q3">登录</button>
-				<p className="q5"><a className="left" href="#">免费注册</a><a className="right" href="#">忘记密码？</a></p>
+				<p className="q5">
+						<a className="left" onClick={()=>{
+									//js跳转页面的方法 ,es6 字符串模板的写法
+									this.props.history.push(`/zhuce`)
+								}}>免费注册</a>
+						<a className="right" onClick={()=>{
+									//js跳转页面的方法 ,es6 字符串模板的写法
+									this.props.history.push(`/wjmm`)
+								}}>忘记密码？</a>
+					</p>
 				</div>
 			<div className="z3">
 				<div className="z1">——————&nbsp;&nbsp;&nbsp;使用下列账号登录&nbsp;&nbsp;&nbsp;——————</div>

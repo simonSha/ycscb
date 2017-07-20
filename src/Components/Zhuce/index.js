@@ -17,7 +17,7 @@ class Zhuce extends Component{
 				<from className="from">
 					<div className="call">
 						<div className="left">
-							<input type="text" placeholder="请输入11位手机号码" className="leftt"/>
+							<input ref="username" type="text" placeholder="请输入11位手机号码" className="leftt"/>
 						</div>
 
 						<div className="right">
@@ -31,7 +31,7 @@ class Zhuce extends Component{
 
 					<div className="pw">
 						<input type="password" className="psw" placeholder="请输入您的mima，长度至少六位"/>
-						<button className="btn">
+						<button className="btn" onClick={this.hclick.bind(this)}>
 							显示
 						</button>
 					</div>
@@ -50,6 +50,10 @@ class Zhuce extends Component{
 			</div>
 			
 		)
+	}
+
+	hclick(){
+		console.log(this.refs.username.value)
 	}
 }
 
