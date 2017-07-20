@@ -21,18 +21,12 @@ module.exports = {
 
             //配置服务器支持反向代理功能
 
-        proxy:{'/index.php': {
-                  target: 'http://m.1c10.cn',
-                  host: 'm.1c10.cn',
+        proxy:{'/api/*': {
+                  target: 'http://10.2.154.229:3000',
+                  host: '10.2.154.229:3000',
                   changeOrigin:true
               },
-              '/list.html': {
-                  target: 'http://m.1c10.cn',
-                  host: 'm.1c10.cn',
-                  changeOrigin:true
-              },
-
-
+            
         }
         
 
