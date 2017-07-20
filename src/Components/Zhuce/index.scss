@@ -6,93 +6,112 @@ $ui-width:750px;
 
 /*********************/
 #zhuce {
-	background:#fff;
-	border-top:R(2px) solid #e0e0e0;
-	border-bottom:R(2px) solid #e0e0e0;
-	margin-top: R(20px);
-	padding-bottom:R(10px);
-	// overflow: hidden;
-	.from{
-		display: block;
-		padding:0 R(10px);
 
-		.call{
-			margin-top: R(20px);
-			position: relative;
-			.right{
-				float: right;
-				width: R(160px);
-				height: R(84px);
-				
-				color: #F64744;
-				background: #fff;
-				font-size: R(24px);
-				border: R(2px) solid #e0e0e0;
-				text-align: center;
-				border-radius: R(20px);
-			}
-			.left{
-				width: R(512px);
-				height: R(88px);
-				border: R(2px) solid #e0e0e0;
-				border-radius: R(10px);
-				.leftt{
-					width: R(492px);
-					height: 100%;
-					border: 0;
-					padding-left: R(20px);
-					line-height: R(88px);
+	// overflow: hidden;
+	.top{
+			background:#fff;
+			border-top:R(2px) solid #e0e0e0;
+			border-bottom:R(2px) solid #e0e0e0;
+			margin-top: R(80px);
+			padding-bottom:R(10px);
+			height: R(500px);
+
+		.from{
+			display: block;
+			padding:0 R(10px);
+			margin-top: R(120px);
+
+			.call{
+				margin-top: R(20px);
+				position: relative;
+				.right{
+					float: right;
+					width: R(160px);
+					height: R(84px);
+					margin-top: R(-90px);
+					color: #F64744;
+					background: #fff;
+					font-size: R(24px);
+					border: R(2px) solid #e0e0e0;
+					text-align: center;
+					border-radius: R(20px);
+					line-height:R(84px);
+				}
+				.left{
+					width: R(512px);
+					height: R(88px);
+					border: R(2px) solid #e0e0e0;
+					border-radius: R(10px);
+					position: relative;
+					.leftt{
+						width: R(492px);
+						height: 100%;
+						border: 0;
+						position:absolute;
+						top:0;
+						padding-left: R(20px);
+						line-height: R(88px);
+					}
 				}
 			}
-		}
-		.yz{
-			position: relative;
-			top: R(20px);
-			width: R(710px);
-			.yzm{
-				width: R(690px);
-				height: R(88px);
-				
+			.yz{
+
+				width: R(710px);
+				margin-top: R(-40px);
+				.yzm{
+					width: R(690px);
+					height: R(88px);
+					
+					border: R(2px) solid #e0e0e0;
+					border-radius: R(10px);
+					padding-left: R(20px);
+				}
+			}
+			.pw{
+				position: relative;
+				top: R(30px);
+				width: R(710px);
 				border: R(2px) solid #e0e0e0;
-				border-radius: R(10px);
-				padding-left: R(20px);
-			}
-		}
-		.pw{
-			position: relative;
-			top: R(30px);
-			width: R(710px);
-			border: R(2px) solid #e0e0e0;
-			border-radius:R(10px);
-			height: R(88px);
-			.psw{
-				width: R(355px);
+				border-radius:R(10px);
 				height: R(88px);
-				
-				padding-left: R(20px);
-				border: 0;
+				.psw{
+					width: R(355px);
+					height: R(88px);
+					position:absolute;
+					top: 0;
+					padding-left: R(20px);
+					border: 0;
+				}
+				.li{
+					
+				}
+				.btn{
+					position:absolute;
+					top: R(12px);
+					right: R(12px);
+					width: R(88px);
+					height: R(60px);
+					color: #9b9b9b;
+					text-align: center;
+					line-height: R(60px);
+					box-sizing: border-box;
+					list-style-type:none;
+				}
 			}
-			.li{
-				
-			}
-			.btn{
-				position:absolute;
-				top: R(12px);
-				right: R(12px);
-				width: R(88px);
-				height: R(60px);
-				color: #9b9b9b;
-				text-align: center;
-				line-height: R(60px);
-				box-sizing: border-box;
-				list-style-type:none;
+			.p{
+				font-size:R(14px);
+				color: #f00;
+				display: block;
+				margin-top: R(30px);
+				display: none;
 			}
 		}
 	}
 	.wc{
-		position: relative;
-		top: R(70px);	
-		padding: 0 R(15px);
+		// position: relative;
+		// top: R(70px);	
+		// padding: 0 R(15px);
+		margin-top: R(30px);
 		.a{
 			width: 100%;
 			height: R(72px);
@@ -109,9 +128,10 @@ $ui-width:750px;
 			line-height: R(60px);
 			margin-top: R(20px);
 			.in{
-				width: R(24px);
-				height: R(24px);
+				width: R(26px);
+				height: R(26px);
 				margin-right: R(10px);
+				background-color: rgba(255, 0, 0, .5);
 			}
 			span{
 				color: #000;
@@ -121,7 +141,10 @@ $ui-width:750px;
 				position:absolute;
 				right: R(330px);
 				font-size: 14px;
+				margin-top: R(30px);
+				color: #296da1;
 			}
 		}
 	}
+
 }
